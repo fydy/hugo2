@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>云溪部落 - Master Technology, Change Destiny</title>
+  <link rel="alternate" hreflang="en" href="https://luolvshi.me/hugo2" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Window-Target" content="_value"> 
+<meta name="robots" content="index,follow"> 
+<meta name="googlebot" content="index,follow"> 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="MaxdSre" />
+  <meta name="description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing." />
+  <meta name="keywords" content="GNU/Linux, System Administration, DevOps, Shell Script, Python, Security" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="https://luolvshi.me/hugo2/" />
+<link href="https://luolvshi.me/hugo2/index.xml" rel="alternate" type="application/rss+xml" title="云溪部落" />
+  <link href="https://luolvshi.me/hugo2/index.xml" rel="feed" type="application/rss+xml" title="云溪部落" />
+
+
+
+<link rel="icon" href="/hugo2/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/hugo2/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="云溪部落" />
+<meta property="og:description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://luolvshi.me/hugo2/" />
+
+
+
+<meta property="og:updated_time" content="2018-04-19T15:37:16-04:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="云溪部落">
+<meta itemprop="description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="云溪部落"/>
+<meta name="twitter:description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/hugo2/" class="logo">AxdLog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        <a href="/hugo2/post/">Archives</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/tags/">Tags</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/categories/">Categories</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/about/">About</a>
+      </li>
+    
+      
+      <li class="mobile-menu-item">
+        <a class="" href="https://luolvshi.me/hugo2/zh/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/hugo2/" class="logo">
+    
+      AxdLog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+      
+      <li class="menu-item">
+        <a class="menu-item-link" href="https://luolvshi.me/hugo2/zh/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          
+  <section id="posts" class="posts">
+    
+    
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2018/setting-up-oracle-jdk-on-gnu-linux/">Setting Up Oracle JDK On GNU/Linux</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Apr 19, 2018 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/gnu/linux/"> GNU/Linux </a>
+          
+        </div>
+      <span class="more-meta"> 829 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">May 14, 2018</span>
+      
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2018/setting-up-oracle-jdk-on-gnu-linux/"><b>漢文版</b></a></span>
+  
+
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><code>Java SE</code> is an abbreviation for <code>Java Platform, Standard Edition</code>, and <code>JDK</code> is an abbreviation for <code>Java SE Development Kit</code>. JDK provides running environment for <a href="http://www.oracle.com/technetwork/java/">Java</a> applications. This article documents how to set up Oracle JDK on GNU/Linux, then implement the entire process through Shell script.</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2018/setting-up-oracle-jdk-on-gnu-linux/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2018/setting-up-anaconda-and-jupyter-notebook-on-gnu-linux/">Setting Up Anaconda And Jupyter Notebook On GNU/Linux</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Apr 19, 2018 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/python/"> Python </a>
+          
+        </div>
+      <span class="more-meta"> 1633 words </span>
+      
+      
+      
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2018/setting-up-anaconda-and-jupyter-notebook-on-gnu-linux/"><b>漢文版</b></a></span>
+  
+
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>The <a href="https://jupyter.org">Jupyter Notebook</a> is an open-source interactive web application developed by <a href="https://www.python.org">Python</a> language. The official recommends installing <a href="https://www.python.org">Python</a> and <a href="https://jupyter.org">Jupyter Notebook</a> using the <a href="https://www.anaconda.com" title="The Most Popular Python Data Science Platform">Anaconda Distribution</a>. This article documents how to set up <a href="https://www.anaconda.com" title="The Most Popular Python Data Science Platform">Anaconda</a> and <a href="https://jupyter.org">Jupyter Notebook</a>, and implement the entire process through a shell script.</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2018/setting-up-anaconda-and-jupyter-notebook-on-gnu-linux/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/">Setting Up Slack Build Notification in Travis CI for Github Project</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Apr 18, 2018 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/blog/"> Blog </a>
+          
+            <a href="/hugo2/categories/devops/"> DevOps </a>
+          
+        </div>
+      <span class="more-meta"> 569 words </span>
+      
+      
+      
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/"><b>漢文版</b></a></span>
+  
+
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>By default, <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a> uses email to send build notification, it also support other method, e.g. <a href="https://slack.com" title="Where work happens">Slack</a>. This article documents how to set up <a href="https://slack.com" title="Where work happens">Slack</a> notification for <a href="https://github.com">GitHub</a> project integrated <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a>.</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2018/using-cloudflare-free-ssl-in-github-pages-with-custom-domain/">Using Cloudflare Free SSL In GitHub Pages With Custom Domain</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Apr 11, 2018 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/blog/"> Blog </a>
+          
+        </div>
+      <span class="more-meta"> 661 words </span>
+      
+      
+      
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2018/using-cloudflare-free-ssl-in-github-pages-with-custom-domain/"><b>漢文版</b></a></span>
+  
+
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>I have succeed in migrating my blog from <a href="https://hexo.io" title="A fast, simple &amp; powerful blog framework">Hexo</a> to <a href="https://gohugo.io" title="The world’s fastest framework for building websites">Hugo</a> platform, new domain is <a href="https://axdlog.com"><strong>AxdLog</strong></a>. As <a href="https://pages.github.com" title="Hosted directly from your GitHub repository. Just edit, push, and your changes are live.">Github Pages</a> doesn&rsquo;t provide SSL certificate for custom domain, so I need to deploy it separately. <a href="https://www.cloudflare.com">CloudFlare</a> provides free SSL certificate, and it has the ability of anti-ddos.</p>
+
+<p>This article documents how to configure
+<a href="https://www.cloudflare.com">CloudFlare</a> free SSL certificate in <a href="https://pages.github.com" title="Hosted directly from your GitHub repository. Just edit, push, and your changes are live.">Github Pages</a>.</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2018/using-cloudflare-free-ssl-in-github-pages-with-custom-domain/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/">Using Hugo and Travis CI To Deploy Blog To Github Pages Automatically</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Apr 11, 2018 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/blog/"> Blog </a>
+          
+        </div>
+      <span class="more-meta"> 1677 words </span>
+      
+      
+      
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/"><b>漢文版</b></a></span>
+  
+
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>My personal static blog is hosted on <a href="https://github.com">Github</a>. I used <a href="https://hexo.io" title="A fast, simple &amp; powerful blog framework">Hexo</a> before, but as its complicated package dependence and cumbersome deployment process, I have to encapsulated the whole deploying environment into Docker image for rapid deployment. But it was still too complex. Now I switch to <a href="https://gohugo.io" title="The world’s fastest framework for building websites">Hugo</a> which is faster, simpler.</p>
+
+<p>This article documents how to automatically synchronize blog contents generated by <a href="https://gohugo.io" title="The world’s fastest framework for building websites">Hugo</a> to <a href="https://github.com">Github</a> through <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a>.</p>
+
+<p><strong>Attention</strong>: The following operation process will not involve account registration, Git configuration.</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2018/cleaning-text-data-which-delimiter-is-special-character-using-sed-and-awk/">Cleaning Text Data Which Delimiter Is Special Character Using Sed &amp; Awk</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Mar 9, 2018 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/production-case/"> Production Case </a>
+          
+        </div>
+      <span class="more-meta"> 998 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 11, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>需要對一份招聘相關的數據樣本(160多萬行)進行數據分析，妻子在用Python處理時出現報錯。經過分析,原因出在<code>分隔符</code>、<code>換行符</code>等特殊符號上，此外還有一條數據分散爲兩行的情況。本人通過對異常數據進行分析，整理出特殊情況類別，在GNU/Linux系統下用<code>sed</code>和<code>awk</code>對數據進行初步清洗，實現預期要求。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2018/cleaning-text-data-which-delimiter-is-special-character-using-sed-and-awk/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+  </section>
+
+  
+  
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  <nav class="pagination">
+    <ul>
+      
+      <li  class="active" >
+        <a href="/hugo2/">1</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/2/">2</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/3/">3</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/4/">4</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/5/">5</a>
+      </li>
+      
+    </ul>
+  </nav>
+
+  
+  
+
+
+
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/7040344" rel="me noopener" class="iconfont icon-stack-overflow"
+        title="stack-overflow" target="_blank">
+      </a>
+      <a href="https://www.linkedin.com/in/lempstacker" rel="me noopener" class="iconfont icon-linkedin"
+        title="linkedin" target="_blank">
+      </a>
+      <a href="https://github.com/MaxdSre" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://luolvshi.me/hugo2/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    <a class="hexo-link" rel="nofollow" href="https://gohugo.io" title="Hugo">Generator</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    <a class="theme-link" rel="nofollow" href="https://github.com/xianmin/hugo-theme-jane" title="Jane">Theme</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+  <a class="theme-link" rel="nofollow" href="https://www.cloudflare.com" title="CloudFlare">SSL</a>
+  </span>
+  
+  
+  <span class="division">|</span>
+  <span>
+  <a class="theme-link" href="https://luolvshi.me/hugo2/sitemap.xml" >Sitemap</a>
+  </span>
+  <span class="copyright-year">
+    &copy;
+    
+      2016 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">MaxdSre</span></span>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/hugo2/dist/jane.min.js?v=2.7.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/hugo2/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

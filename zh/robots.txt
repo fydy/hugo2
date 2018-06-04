@@ -1,0 +1,8 @@
+User-agent: *
+Sitemap: https://luolvshi.me/hugo2/sitemap.xml
+Disallow: /hugo2/歸檔/
+Disallow: /hugo2/標籤/
+Disallow: /hugo2/分類/
+Disallow: /hugo2/關於/
+Disallow: /page/
+Disallow: /post/

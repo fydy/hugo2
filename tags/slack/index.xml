@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slack on 云溪部落</title>
+    <link>https://luolvshi.me/hugo2/tags/slack/</link>
+    <description>Recent content in Slack on 云溪部落</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 18 Apr 2018 13:31:34 -0400</lastBuildDate>
+    
+	<atom:link href="https://luolvshi.me/hugo2/tags/slack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting Up Slack Build Notification in Travis CI for Github Project</title>
+      <link>https://luolvshi.me/hugo2/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/</link>
+      <pubDate>Wed, 18 Apr 2018 13:31:34 -0400</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/</guid>
+      <description>&lt;p&gt;By default, &lt;a href=&#34;https://travis-ci.org&#34; title=&#34;Test and Deploy with Confidence&#34;&gt;Travis CI&lt;/a&gt; uses email to send build notification, it also support other method, e.g. &lt;a href=&#34;https://slack.com&#34; title=&#34;Where work happens&#34;&gt;Slack&lt;/a&gt;. This article documents how to set up &lt;a href=&#34;https://slack.com&#34; title=&#34;Where work happens&#34;&gt;Slack&lt;/a&gt; notification for &lt;a href=&#34;https://github.com&#34;&gt;GitHub&lt;/a&gt; project integrated &lt;a href=&#34;https://travis-ci.org&#34; title=&#34;Test and Deploy with Confidence&#34;&gt;Travis CI&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>云溪部落 - Master Technology, Change Destiny</title>
+  <link rel="alternate" hreflang="en" href="https://luolvshi.me/hugo2" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Window-Target" content="_value"> 
+<meta name="robots" content="index,follow"> 
+<meta name="googlebot" content="index,follow"> 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="MaxdSre" />
+  <meta name="description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing." />
+  <meta name="keywords" content="GNU/Linux, System Administration, DevOps, Shell Script, Python, Security" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="https://luolvshi.me/hugo2/" />
+<link href="https://luolvshi.me/hugo2/index.xml" rel="alternate" type="application/rss+xml" title="云溪部落" />
+  <link href="https://luolvshi.me/hugo2/index.xml" rel="feed" type="application/rss+xml" title="云溪部落" />
+
+
+
+<link rel="icon" href="/hugo2/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/hugo2/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="云溪部落" />
+<meta property="og:description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://luolvshi.me/hugo2/" />
+
+
+
+<meta property="og:updated_time" content="2016-03-11T18:31:58&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="云溪部落">
+<meta itemprop="description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="云溪部落"/>
+<meta name="twitter:description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/hugo2/" class="logo">AxdLog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        <a href="/hugo2/post/">Archives</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/tags/">Tags</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/categories/">Categories</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/about/">About</a>
+      </li>
+    
+      
+      <li class="mobile-menu-item">
+        <a class="" href="https://luolvshi.me/hugo2/zh/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/hugo2/" class="logo">
+    
+      AxdLog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+      
+      <li class="menu-item">
+        <a class="menu-item-link" href="https://luolvshi.me/hugo2/zh/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          
+  <section id="posts" class="posts">
+    
+    
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/lemp-stack-installation-and-configuration-on-centos-7/">LEMP Stack Installation And Configuration On CentOS 7</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Mar 11, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/php/"> PHP </a>
+          
+        </div>
+      <span class="more-meta"> 3148 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">May 7, 2018</span>
+      
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2016/lemp-stack-installation-and-configuration-on-centos-7/"><b>漢文版</b></a></span>
+  
+
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>This article documents how to install, configure <strong>LEMP</strong> (<a href="https://www.nginx.com" title="High Performance Load Balancer, Web Server, &amp; Reverse Proxy">Nginx</a>、<a href="https://www.mysql.com" title="MySQL is the world's most popular open source database.">MySQL</a>、<a href="https://secure.php.net" title="PHP is a popular general-purpose scripting language that is especially suited to web development.">PHP</a>) stack in <code>CentOS 7</code> which <code>SELinux</code>、<code>Firewalld</code> has been enabled.</p>
+
+<p>I wrote some shell script to automate operation, the project is hosted on <a href="https://github.com/MaxdSre/axd-ShellScript" title="axd Shell Script">GitHub</a>. But <a href="https://secure.php.net" title="PHP is a popular general-purpose scripting language that is especially suited to web development.">PHP</a> is still need to installed manually currently.</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/lemp-stack-installation-and-configuration-on-centos-7/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/a-complete-intrduction-to-markdown-syntax/">A Complete Intrduction To Markdown Syntax</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Jan 25, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/tutorial/"> Tutorial </a>
+          
+        </div>
+      <span class="more-meta"> 5580 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 11, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>是一種輕量級的標記語言，採用純文本語法格式，文件後綴爲<code>.md</code>。<a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>應用廣泛，常用於撰寫<a href="https://en.wikipedia.org/wiki/README" title="WikiPedia">README</a>。<a href="https://jekyllrb.com" title="Jekyll is a simple, blog-aware, static site generator">Jekyll</a>, <a href="https://hexo.io" title="A fast, simple &amp; powerful blog framework">Hexo</a>, <a href="https://gohugo.io" title="The world’s fastest framework for building websites">Hugo</a>等靜態Blog框架支持Markdown語法，<a href="https://www.digitalocean.com" title="Digital Ocean">Digital Ocean</a>、<a href="https://stackoverflow.com" title="Stack Overflow">Stack Overflow</a>等網站也支持Markdown語法。只是各家對Markdown的語法解釋不盡相同，如對<code>TOC</code>、<code>Diagram</code>、<code>LaTeX</code>的支持。</p>
+
+<p>本文詳細介紹<a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>的語法、使用。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/a-complete-intrduction-to-markdown-syntax/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/using-google-authenticator-to-set-up-multi-factor-authentication-on-gnu-linux/">Using Google Authenticator To Set Up Multi-Factor Authentication On GNU/Linux</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Jan 25, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/security/"> Security </a>
+          
+        </div>
+      <span class="more-meta"> 7629 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 11, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><a href="https://en.wikipedia.org/wiki/Linux_PAM" title="Wikipedia">PAM</a>是一種動態認證機制，通過多重認證提升系統安全係數。<a href="https://en.wikipedia.org/wiki/Google_Authenticator">Google Authenticator</a>是基於<a href="https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm" title="WikiPedia">TOTP</a>和<a href="https://en.wikipedia.org/wiki/HMAC-based_One-time_Password_Algorithm" title="WikiPedia">HOTP</a>的2步認證應用，通過移動端的<code>Google Authenticator</code>應用生成token(存活期30秒)。</p>
+
+<p>本文記錄利用其為GNU/Linux桌面系統、遠程SSH連接配置2步認證，並通過Shell Script實現相關功能。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/using-google-authenticator-to-set-up-multi-factor-authentication-on-gnu-linux/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+  </section>
+
+  
+  
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  <nav class="pagination">
+    <ul>
+      
+      <li >
+        <a href="/hugo2/">1</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/2/">2</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/3/">3</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/4/">4</a>
+      </li>
+      
+      <li  class="active" >
+        <a href="/hugo2/page/5/">5</a>
+      </li>
+      
+    </ul>
+  </nav>
+
+  
+  
+
+
+
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/7040344" rel="me noopener" class="iconfont icon-stack-overflow"
+        title="stack-overflow" target="_blank">
+      </a>
+      <a href="https://www.linkedin.com/in/lempstacker" rel="me noopener" class="iconfont icon-linkedin"
+        title="linkedin" target="_blank">
+      </a>
+      <a href="https://github.com/MaxdSre" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://luolvshi.me/hugo2/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    <a class="hexo-link" rel="nofollow" href="https://gohugo.io" title="Hugo">Generator</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    <a class="theme-link" rel="nofollow" href="https://github.com/xianmin/hugo-theme-jane" title="Jane">Theme</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+  <a class="theme-link" rel="nofollow" href="https://www.cloudflare.com" title="CloudFlare">SSL</a>
+  </span>
+  
+  
+  <span class="division">|</span>
+  <span>
+  <a class="theme-link" href="https://luolvshi.me/hugo2/sitemap.xml" >Sitemap</a>
+  </span>
+  <span class="copyright-year">
+    &copy;
+    
+      2016 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">MaxdSre</span></span>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/hugo2/dist/jane.min.js?v=2.7.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/hugo2/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

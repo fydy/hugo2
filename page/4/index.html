@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>云溪部落 - Master Technology, Change Destiny</title>
+  <link rel="alternate" hreflang="en" href="https://luolvshi.me/hugo2" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Window-Target" content="_value"> 
+<meta name="robots" content="index,follow"> 
+<meta name="googlebot" content="index,follow"> 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="MaxdSre" />
+  <meta name="description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing." />
+  <meta name="keywords" content="GNU/Linux, System Administration, DevOps, Shell Script, Python, Security" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="https://luolvshi.me/hugo2/" />
+<link href="https://luolvshi.me/hugo2/index.xml" rel="alternate" type="application/rss+xml" title="云溪部落" />
+  <link href="https://luolvshi.me/hugo2/index.xml" rel="feed" type="application/rss+xml" title="云溪部落" />
+
+
+
+<link rel="icon" href="/hugo2/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/hugo2/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="云溪部落" />
+<meta property="og:description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://luolvshi.me/hugo2/" />
+
+
+
+<meta property="og:updated_time" content="2016-08-24T04:38:08&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="云溪部落">
+<meta itemprop="description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="云溪部落"/>
+<meta name="twitter:description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/hugo2/" class="logo">AxdLog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        <a href="/hugo2/post/">Archives</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/tags/">Tags</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/categories/">Categories</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/about/">About</a>
+      </li>
+    
+      
+      <li class="mobile-menu-item">
+        <a class="" href="https://luolvshi.me/hugo2/zh/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/hugo2/" class="logo">
+    
+      AxdLog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+      
+      <li class="menu-item">
+        <a class="menu-item-link" href="https://luolvshi.me/hugo2/zh/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          
+  <section id="posts" class="posts">
+    
+    
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/using-doctrine-dbal-to-work-with-database-in-symfony-4/">Using Doctrine DBAL To Work With Database In Symfony 4</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Aug 24, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/php/"> PHP </a>
+          
+        </div>
+      <span class="more-meta"> 3763 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 14, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>Web應用通常使用數據庫存儲數據，<a href="https://lemp.io/"><strong>LEMP</strong></a>中的 <strong>M</strong> 即指數據庫（默認爲 <a href="https://www.mysql.com" title="MySQL is the world's most popular open source database.">MySQL</a>）。PHP框架<a href="https://symfony.com" title="High Performance PHP Framework for Web Development">Symfony</a>是通過集成的第三方庫 <a href="https://www.doctrine-project.org" title="The Open-Source PHP ORM and Persistence Tools Project">Doctrine</a> 與數據庫交互（通過<a href="https://getcomposer.org" title="Dependency Manager for PHP">Composer</a>安裝）。<a href="https://www.doctrine-project.org" title="The Open-Source PHP ORM and Persistence Tools Project">Doctrine</a>支持2中形式 <a href="https://symfony.com/doc/master/doctrine.html">Doctrine ORM</a> 和 <a href="https://www.doctrine-project.org/projects/dbal.html" title="Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection, schema management and PDO abstraction.">Doctrine DBAL</a>。<code>DBAL</code>是<code>Database Abstraction Layer</code>（數據庫抽象層）的縮寫，<a href="https://www.doctrine-project.org/projects/dbal.html" title="Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection, schema management and PDO abstraction.">Doctrine DBAL</a>支持原生的SQL語句。</p>
+
+<p>本文記錄如何在<a href="https://symfony.com" title="High Performance PHP Framework for Web Development">Symfony 4</a>中通過<a href="https://www.doctrine-project.org/projects/dbal.html" title="Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection, schema management and PDO abstraction.">Doctrine DBAL</a>進行數據庫的<a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete" title="wikipedia">CRUD</a>操作。（與Symfony 3相比，變動很大）</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/using-doctrine-dbal-to-work-with-database-in-symfony-4/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/installing-and-setting-up-the-symfony-framework-on-centos-7/">Installing And Setting Up The Symfony Framework On CentOS 7</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Aug 23, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/php/"> PHP </a>
+          
+        </div>
+      <span class="more-meta"> 2580 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 14, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><a href="https://symfony.com" title="High Performance PHP Framework for Web Development">Symfony</a>是一款<a href="https://secure.php.net" title="PHP is a popular general-purpose scripting language that is especially suited to web development.">PHP</a>開發框架，目前最新版本是<code>4.0</code>，長期支持版是<code>3.4</code>。本文記錄如何在<code>CentOS 7</code>中安裝、配置Symfony 4。</p>
+
+<p><a href="https://symfony.com" title="High Performance PHP Framework for Web Development">Symfony</a>官方文檔頁 <a href="https://symfony.com/doc/current/index.html">https://symfony.com/doc/current/index.html</a></p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/installing-and-setting-up-the-symfony-framework-on-centos-7/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/using-awk-to-extract-statistic-results-from-multiple-log-files/">Using Awk To Extract Statistic Results From Multiple Log Files</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Jul 13, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/production-case/"> Production Case </a>
+          
+        </div>
+      <span class="more-meta"> 1728 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 12, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>工作中遇到一個需求：從日誌文件中提取符合指定條件的數據，獲取其出現頻次(條件有多種、日誌有多個)。存有日誌的服務器是線上運行的服務器，直接在其上進行操作會對服務器造成較大壓力。故需對日誌進行轉移，而其又是內網服務器，只能通過跳板機登錄，故將相關日誌複製到跳板機中再進行操作。</p>
+
+<p>個人研究後，使用<code>awk</code>命令解決，以下是操作過程和撰寫的Shell腳本。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/using-awk-to-extract-statistic-results-from-multiple-log-files/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/gnu-linux-post-installation-configuration-full-record/">GNU/Linux Post Installation Configuration Full Record</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Jun 17, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/gnu/linux/"> GNU/Linux </a>
+          
+        </div>
+      <span class="more-meta"> 4743 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 24, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><a href="https://www.gnu.org" title="GNU Operating System">GNU/Linux</a>安裝完成後，需要進行一系列的初始化配置才能滿足使用需求。本文詳細記錄各初始化操作，並用Shell腳本實現相關過程（在<code>root</code>模式中操作）。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/gnu-linux-post-installation-configuration-full-record/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/building-docker-private-registry-with-self-signed-certificate/">Building Docker Private Registry With Self-signed Certificate</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Jun 6, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/container/"> Container </a>
+          
+            <a href="/hugo2/categories/production-case/"> Production Case </a>
+          
+        </div>
+      <span class="more-meta"> 2127 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 12, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><a href="https://www.docker.com" title="Docker">Docker</a>是一款開源的，提供<code>Operating-system-level virtualization</code>(操作系統級別的虛擬化的)容器(container)產品，可實現在軟件容器中自動部署應用。本文主要記錄如何<a href="https://www.docker.com" title="Docker">Docker</a>的<a href="https://hub.docker.com/_/registry/">Registry</a>創建私有倉庫，並通過自簽證書實現通過域名訪問私有倉庫。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/building-docker-private-registry-with-self-signed-certificate/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/crawling-china-administrative-division-code/">Crawling China Administrative Division Code</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Mar 14, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/web-crawling/"> Web Crawling </a>
+          
+        </div>
+      <span class="more-meta"> 7522 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 22, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>本文記錄如何從<a href="http://www.stats.gov.cn">中華人民共和國國家統計局</a>官網提取中國大陸地區的行政區劃信息，數據入庫，並通過Shell腳本實現整個過程。項目代碼託管在<a href="https://github.com/MaxdSre/Shell-script-web-crawler/tree/master/project/CADC">GitHub</a>，包含Shell腳本、數據庫數據表、文本數據、從MySQL中導出的SQL數據。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/crawling-china-administrative-division-code/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+  </section>
+
+  
+  
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  <nav class="pagination">
+    <ul>
+      
+      <li >
+        <a href="/hugo2/">1</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/2/">2</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/3/">3</a>
+      </li>
+      
+      <li  class="active" >
+        <a href="/hugo2/page/4/">4</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/5/">5</a>
+      </li>
+      
+    </ul>
+  </nav>
+
+  
+  
+
+
+
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/7040344" rel="me noopener" class="iconfont icon-stack-overflow"
+        title="stack-overflow" target="_blank">
+      </a>
+      <a href="https://www.linkedin.com/in/lempstacker" rel="me noopener" class="iconfont icon-linkedin"
+        title="linkedin" target="_blank">
+      </a>
+      <a href="https://github.com/MaxdSre" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://luolvshi.me/hugo2/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    <a class="hexo-link" rel="nofollow" href="https://gohugo.io" title="Hugo">Generator</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    <a class="theme-link" rel="nofollow" href="https://github.com/xianmin/hugo-theme-jane" title="Jane">Theme</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+  <a class="theme-link" rel="nofollow" href="https://www.cloudflare.com" title="CloudFlare">SSL</a>
+  </span>
+  
+  
+  <span class="division">|</span>
+  <span>
+  <a class="theme-link" href="https://luolvshi.me/hugo2/sitemap.xml" >Sitemap</a>
+  </span>
+  <span class="copyright-year">
+    &copy;
+    
+      2016 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">MaxdSre</span></span>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/hugo2/dist/jane.min.js?v=2.7.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/hugo2/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

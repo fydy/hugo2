@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on 云溪部落</title>
+    <link>https://luolvshi.me/hugo2/categories/python/</link>
+    <description>Recent content in Python on 云溪部落</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 19 Apr 2018 10:42:53 -0400</lastBuildDate>
+    
+	<atom:link href="https://luolvshi.me/hugo2/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting Up Anaconda And Jupyter Notebook On GNU/Linux</title>
+      <link>https://luolvshi.me/hugo2/2018/setting-up-anaconda-and-jupyter-notebook-on-gnu-linux/</link>
+      <pubDate>Thu, 19 Apr 2018 10:42:53 -0400</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2018/setting-up-anaconda-and-jupyter-notebook-on-gnu-linux/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://jupyter.org&#34;&gt;Jupyter Notebook&lt;/a&gt; is an open-source interactive web application developed by &lt;a href=&#34;https://www.python.org&#34;&gt;Python&lt;/a&gt; language. The official recommends installing &lt;a href=&#34;https://www.python.org&#34;&gt;Python&lt;/a&gt; and &lt;a href=&#34;https://jupyter.org&#34;&gt;Jupyter Notebook&lt;/a&gt; using the &lt;a href=&#34;https://www.anaconda.com&#34; title=&#34;The Most Popular Python Data Science Platform&#34;&gt;Anaconda Distribution&lt;/a&gt;. This article documents how to set up &lt;a href=&#34;https://www.anaconda.com&#34; title=&#34;The Most Popular Python Data Science Platform&#34;&gt;Anaconda&lt;/a&gt; and &lt;a href=&#34;https://jupyter.org&#34;&gt;Jupyter Notebook&lt;/a&gt;, and implement the entire process through a shell script.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

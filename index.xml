@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>云溪部落</title>
+    <link>https://luolvshi.me/hugo2/</link>
+    <description>Recent content on 云溪部落</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 19 Apr 2018 15:37:16 -0400</lastBuildDate>
+    
+        <atom:link href="https://luolvshi.me/hugo2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting Up Oracle JDK On GNU/Linux</title>
+      <link>https://luolvshi.me/hugo2/2018/setting-up-oracle-jdk-on-gnu-linux/</link>
+      <pubDate>Thu, 19 Apr 2018 15:37:16 -0400</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2018/setting-up-oracle-jdk-on-gnu-linux/</guid>
+      
+        <description>&lt;p&gt;&lt;code&gt;Java SE&lt;/code&gt; is an abbreviation for &lt;code&gt;Java Platform, Standard Edition&lt;/code&gt;, and &lt;code&gt;JDK&lt;/code&gt; is an abbreviation for &lt;code&gt;Java SE Development Kit&lt;/code&gt;. JDK provides running environment for &lt;a href=&#34;http://www.oracle.com/technetwork/java/&#34;&gt;Java&lt;/a&gt; applications. This article documents how to set up Oracle JDK on GNU/Linux, then implement the entire process through Shell script.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Setting Up Anaconda And Jupyter Notebook On GNU/Linux</title>
+      <link>https://luolvshi.me/hugo2/2018/setting-up-anaconda-and-jupyter-notebook-on-gnu-linux/</link>
+      <pubDate>Thu, 19 Apr 2018 10:42:53 -0400</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2018/setting-up-anaconda-and-jupyter-notebook-on-gnu-linux/</guid>
+      
+        <description>&lt;p&gt;The &lt;a href=&#34;https://jupyter.org&#34;&gt;Jupyter Notebook&lt;/a&gt; is an open-source interactive web application developed by &lt;a href=&#34;https://www.python.org&#34;&gt;Python&lt;/a&gt; language. The official recommends installing &lt;a href=&#34;https://www.python.org&#34;&gt;Python&lt;/a&gt; and &lt;a href=&#34;https://jupyter.org&#34;&gt;Jupyter Notebook&lt;/a&gt; using the &lt;a href=&#34;https://www.anaconda.com&#34; title=&#34;The Most Popular Python Data Science Platform&#34;&gt;Anaconda Distribution&lt;/a&gt;. This article documents how to set up &lt;a href=&#34;https://www.anaconda.com&#34; title=&#34;The Most Popular Python Data Science Platform&#34;&gt;Anaconda&lt;/a&gt; and &lt;a href=&#34;https://jupyter.org&#34;&gt;Jupyter Notebook&lt;/a&gt;, and implement the entire process through a shell script.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Setting Up Slack Build Notification in Travis CI for Github Project</title>
+      <link>https://luolvshi.me/hugo2/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/</link>
+      <pubDate>Wed, 18 Apr 2018 13:31:34 -0400</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/</guid>
+      
+        <description>&lt;p&gt;By default, &lt;a href=&#34;https://travis-ci.org&#34; title=&#34;Test and Deploy with Confidence&#34;&gt;Travis CI&lt;/a&gt; uses email to send build notification, it also support other method, e.g. &lt;a href=&#34;https://slack.com&#34; title=&#34;Where work happens&#34;&gt;Slack&lt;/a&gt;. This article documents how to set up &lt;a href=&#34;https://slack.com&#34; title=&#34;Where work happens&#34;&gt;Slack&lt;/a&gt; notification for &lt;a href=&#34;https://github.com&#34;&gt;GitHub&lt;/a&gt; project integrated &lt;a href=&#34;https://travis-ci.org&#34; title=&#34;Test and Deploy with Confidence&#34;&gt;Travis CI&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using Cloudflare Free SSL In GitHub Pages With Custom Domain</title>
+      <link>https://luolvshi.me/hugo2/2018/using-cloudflare-free-ssl-in-github-pages-with-custom-domain/</link>
+      <pubDate>Wed, 11 Apr 2018 15:16:42 -0400</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2018/using-cloudflare-free-ssl-in-github-pages-with-custom-domain/</guid>
+      
+        <description>&lt;p&gt;I have succeed in migrating my blog from &lt;a href=&#34;https://hexo.io&#34; title=&#34;A fast, simple &amp;amp; powerful blog framework&#34;&gt;Hexo&lt;/a&gt; to &lt;a href=&#34;https://gohugo.io&#34; title=&#34;The world’s fastest framework for building websites&#34;&gt;Hugo&lt;/a&gt; platform, new domain is &lt;a href=&#34;https://axdlog.com&#34;&gt;&lt;strong&gt;AxdLog&lt;/strong&gt;&lt;/a&gt;. As &lt;a href=&#34;https://pages.github.com&#34; title=&#34;Hosted directly from your GitHub repository. Just edit, push, and your changes are live.&#34;&gt;Github Pages&lt;/a&gt; doesn&amp;rsquo;t provide SSL certificate for custom domain, so I need to deploy it separately. &lt;a href=&#34;https://www.cloudflare.com&#34;&gt;CloudFlare&lt;/a&gt; provides free SSL certificate, and it has the ability of anti-ddos.&lt;/p&gt;
+
+&lt;p&gt;This article documents how to configure
+&lt;a href=&#34;https://www.cloudflare.com&#34;&gt;CloudFlare&lt;/a&gt; free SSL certificate in &lt;a href=&#34;https://pages.github.com&#34; title=&#34;Hosted directly from your GitHub repository. Just edit, push, and your changes are live.&#34;&gt;Github Pages&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using Hugo and Travis CI To Deploy Blog To Github Pages Automatically</title>
+      <link>https://luolvshi.me/hugo2/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/</link>
+      <pubDate>Wed, 11 Apr 2018 00:20:07 -0400</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/</guid>
+      
+        <description>&lt;p&gt;My personal static blog is hosted on &lt;a href=&#34;https://github.com&#34;&gt;Github&lt;/a&gt;. I used &lt;a href=&#34;https://hexo.io&#34; title=&#34;A fast, simple &amp;amp; powerful blog framework&#34;&gt;Hexo&lt;/a&gt; before, but as its complicated package dependence and cumbersome deployment process, I have to encapsulated the whole deploying environment into Docker image for rapid deployment. But it was still too complex. Now I switch to &lt;a href=&#34;https://gohugo.io&#34; title=&#34;The world’s fastest framework for building websites&#34;&gt;Hugo&lt;/a&gt; which is faster, simpler.&lt;/p&gt;
+
+&lt;p&gt;This article documents how to automatically synchronize blog contents generated by &lt;a href=&#34;https://gohugo.io&#34; title=&#34;The world’s fastest framework for building websites&#34;&gt;Hugo&lt;/a&gt; to &lt;a href=&#34;https://github.com&#34;&gt;Github&lt;/a&gt; through &lt;a href=&#34;https://travis-ci.org&#34; title=&#34;Test and Deploy with Confidence&#34;&gt;Travis CI&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Attention&lt;/strong&gt;: The following operation process will not involve account registration, Git configuration.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Cleaning Text Data Which Delimiter Is Special Character Using Sed &amp; Awk</title>
+      <link>https://luolvshi.me/hugo2/2018/cleaning-text-data-which-delimiter-is-special-character-using-sed-and-awk/</link>
+      <pubDate>Fri, 09 Mar 2018 01:26:21 -0400</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2018/cleaning-text-data-which-delimiter-is-special-character-using-sed-and-awk/</guid>
+      
+        <description>&lt;p&gt;需要對一份招聘相關的數據樣本(160多萬行)進行數據分析，妻子在用Python處理時出現報錯。經過分析,原因出在&lt;code&gt;分隔符&lt;/code&gt;、&lt;code&gt;換行符&lt;/code&gt;等特殊符號上，此外還有一條數據分散爲兩行的情況。本人通過對異常數據進行分析，整理出特殊情況類別，在GNU/Linux系統下用&lt;code&gt;sed&lt;/code&gt;和&lt;code&gt;awk&lt;/code&gt;對數據進行初步清洗，實現預期要求。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Extracting API Requests Counts From Nginx Access Log Per week</title>
+      <link>https://luolvshi.me/hugo2/2017/extracting-api-requests-counts-from-nginx-access-log-per-week/</link>
+      <pubDate>Tue, 12 Dec 2017 19:58:34 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2017/extracting-api-requests-counts-from-nginx-access-log-per-week/</guid>
+      
+        <description>&lt;p&gt;2017年7月3日寫過一篇 &lt;code&gt;Extracting API Requests Info From Nginx Access Log&lt;/code&gt;，主要記錄從Nginx日誌中提取各自有API的請求頻次。最近一段時間，線上環境服務器的CPU、內存時常會被佔滿，導致線上服務宕掉。爲了解決該問題，其中一項舉措是要求運維這邊每週提取一次各API接口的請求數據，該任務仍有本人來操作。本文主要記錄在當前需求下，數據的提取過程。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Deploying Project Codes To Multiple Remote Hosts Via SSH</title>
+      <link>https://luolvshi.me/hugo2/2017/deploying-project-codes-to-multiple-remote-hosts-via-ssh/</link>
+      <pubDate>Tue, 24 Oct 2017 16:46:16 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2017/deploying-project-codes-to-multiple-remote-hosts-via-ssh/</guid>
+      
+        <description>&lt;p&gt;截至目前(2017-10)，公司測試、驗證、生產環境的代碼仍使用人工手動部署，其中緣由，歷史與現實原因皆有。數月前，研發部門對系統架構進行了一次更改，其中加入了負載均衡(load balance)功能。架構更改後，項目由單節點(主機)運行變成多節點(主機)運行，服務器數量增加了近一倍，加之公司有30多個自有項目在運行。若仍使用人工部署方式，一則運維同事壓力巨大，二則嚴重影響生產效率。在IT運維部經理的要求下，本人着手進行代碼部署的自動化工作。&lt;/p&gt;
+
+&lt;p&gt;本文記錄如何使用&lt;code&gt;SSH&lt;/code&gt;將項目代碼傳輸到遠程內網主機中，進行代碼部署操作，並給出Shell Script代碼(簡易版)。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://luolvshi.me/hugo2/about/</link>
+      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/about/</guid>
+      
+        <description>Introduction I was born in 1990 in the southern Jiangsu province of mainland China. A pseudo literary and artistic youth.
+I graduated from college in 2012, major is Information and Computing Science.
+After I experienced a year of wiring customer service, a year of factory apprentice. I decided to Internet in 2014.
+Work Experiences    Timeline Experience     2014.05 ~ 2014.10 Learning PHP programming in Beijing   2014.</description>
+      
+    </item>
+    
+    <item>
+      <title>Splitting Nginx Log By Date Via GNU Awk</title>
+      <link>https://luolvshi.me/hugo2/2017/splitting-nginx-log-by-date-via-gnu-awk/</link>
+      <pubDate>Thu, 10 Aug 2017 16:40:24 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2017/splitting-nginx-log-by-date-via-gnu-awk/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.nginx.com/&#34; title=&#34;Nginx&#34;&gt;Nginx&lt;/a&gt;在運行過程中會生成大量&lt;code&gt;access&lt;/code&gt;和&lt;code&gt;error&lt;/code&gt;日誌，默認情況下日誌文件大小持續增長。爲方便操作(如打開、查詢)，需對Nginx日誌進行切割，如按日期，而&lt;a href=&#34;https://www.nginx.com/&#34; title=&#34;Nginx&#34;&gt;Nginx&lt;/a&gt;本身並不提供該功能。&lt;/p&gt;
+
+&lt;p&gt;網路上的方案千篇一律：利用&lt;a href=&#34;https://www.nginx.com/&#34; title=&#34;Nginx&#34;&gt;Nginx&lt;/a&gt;的&lt;a href=&#34;https://www.nginx.com/resources/wiki/start/topics/examples/logrotation/&#34; title=&#34;Nginx&#34;&gt;Log Rotation&lt;/a&gt;功能，操作日誌後，通過&lt;code&gt;USR1&lt;/code&gt;信號重新打開日誌；將操作命令寫入腳本，通過cron任務定時執行。對於該種方案，本人不做任何評價。&lt;/p&gt;
+
+&lt;p&gt;本文主要記錄如何通過&lt;a href=&#34;https://www.gnu.org/software/gawk/&#34; title=&#34;GNU awk&#34;&gt;awk&lt;/a&gt;實現Nginx日誌按年分、月份、周、天、小時等預定方式進行切割。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Extracting API Requests Info From Nginx Access Log</title>
+      <link>https://luolvshi.me/hugo2/2017/extracting-api-requests-info-from-nginx-access-log/</link>
+      <pubDate>Mon, 03 Jul 2017 11:43:21 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2017/extracting-api-requests-info-from-nginx-access-log/</guid>
+      
+        <description>&lt;p&gt;運維部接到研發經理的需求，從Nginx日誌中提取某一天API接口調用信息，並根據指定的維度進行彙總。因日誌文件在線上生產環境中，且單個文件大小達數GB，爲了減少操作對生產環境的穩定性造成影響。將初步提取的數據下載到本地環境，進行進一步的彙總分析。&lt;/p&gt;
+
+&lt;p&gt;以前是將提取的數據導入MySQL數據庫，通過SQL進行提取分析，雖方便但數據導入過程過於漫長。本文
+操作主要使用&lt;code&gt;sed&lt;/code&gt;、&lt;code&gt;awk&lt;/code&gt;命令，並大量使用了一些高級特性，如&lt;code&gt;sed&lt;/code&gt;的添加行號、&lt;a href=&#34;https://www.gnu.org/software/sed/manual/html_node/Character-Classes-and-Bracket-Expressions.html&#34; title=&#34;Character Class&#34;&gt;字符类&lt;/a&gt;、正则、&lt;a href=&#34;https://www.gnu.org/software/sed/manual/html_node/Back_002dreferences-and-Subexpressions.html&#34; title=&#34;Back-references and Subexpressions&#34;&gt;後向引用&lt;/a&gt;；&lt;code&gt;awk&lt;/code&gt;的getline、&lt;a href=&#34;https://www.gnu.org/software/gawk/manual/html_node/Controlling-Scanning.html&#34; title=&#34;Controlling Array Traversal&#34;&gt;預定義數組掃描排序&lt;/a&gt;、&lt;a href=&#34;https://www.gnu.org/software/gawk/manual/html_node/Multidimensional.html&#34; title=&#34;Multidimensional Arrays&#34;&gt;多維數組&lt;/a&gt;等，算是後積薄發的一次展現。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using Sed To Reverse Character Or Line On GNU/Linux</title>
+      <link>https://luolvshi.me/hugo2/2017/using-sed-to-reverse-character-or-line-on-gnu-linux/</link>
+      <pubDate>Thu, 15 Jun 2017 11:27:01 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2017/using-sed-to-reverse-character-or-line-on-gnu-linux/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.gnu.org/software/sed/&#34; title=&#34;GNU sed&#34;&gt;GNU sed&lt;/a&gt;是一款文本流編輯器(stream editor)，功能強大，官方文檔 &lt;a href=&#34;https://www.gnu.org/software/sed/manual/sed.html&#34;&gt;sed, a stream editor&lt;/a&gt;。網路上也有許多不錯的教程，&lt;a href=&#34;http://pement.org/sed/sed1line.txt&#34;&gt;USEFUL ONE-LINE SCRIPTS FOR SED (Unix stream editor)&lt;/a&gt;便是其中之一。本文主要討論其中 &lt;em&gt;字符串逆序排列&lt;/em&gt; (character reverse)和 &lt;em&gt;文本行倒置&lt;/em&gt; (line reverse，功能類似&lt;code&gt;tac&lt;/code&gt;命令)的實現過程。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Printing The Previous Or Next Line Of The Matched Line Using Sed OR Awk</title>
+      <link>https://luolvshi.me/hugo2/2017/printing-the-previous-or-next-line-of-the-matched-line-using-sed-or-awk/</link>
+      <pubDate>Wed, 15 Mar 2017 14:57:39 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2017/printing-the-previous-or-next-line-of-the-matched-line-using-sed-or-awk/</guid>
+      
+        <description>&lt;p&gt;在GNU/Linux中，&lt;a href=&#34;https://www.gnu.org/software/gawk/&#34; title=&#34;GNU awk&#34;&gt;awk(gawk)&lt;/a&gt;和&lt;a href=&#34;https://www.gnu.org/software/sed/&#34; title=&#34;GNU sed&#34;&gt;sed&lt;/a&gt;可用於處理文本數據。本文討論的是如何使用二者提取匹配數據行的前一行或後一行數據。如果匹配數據行出現多次，則只輸出第一次匹配到的數據行。&lt;/p&gt;
+
+&lt;p&gt;本文採用真實案例進行討論&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;(匹配行的前一行) 提取&lt;a href=&#34;https://nginx.org/&#34; title=&#34;Nginx Web Server&#34;&gt;Nginx&lt;/a&gt;的最新版本號；&lt;/li&gt;
+&lt;li&gt;(匹配行的後一行) 提取&lt;a href=&#34;https://www.kernel.org&#34; title=&#34;Linux Kernel&#34;&gt;Linux Kernel&lt;/a&gt;的最新版本號；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Installing And Configuring Docker Community Edition(CE) On GNU/Linux</title>
+      <link>https://luolvshi.me/hugo2/2017/installing-and-configuring-docker-community-edition-ce-on-gnu-linux/</link>
+      <pubDate>Mon, 06 Mar 2017 13:24:08 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2017/installing-and-configuring-docker-community-edition-ce-on-gnu-linux/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.docker.com&#34; title=&#34;Docker&#34;&gt;Docker&lt;/a&gt; is a open source container program that performs operating-system-level virtualization. &lt;a href=&#34;https://www.docker.com&#34; title=&#34;Docker&#34;&gt;Docker&lt;/a&gt; currently provides three products &lt;code&gt;Enterprise Edition(EE)&lt;/code&gt;、&lt;code&gt;Community Edition(CE)&lt;/code&gt; and &lt;code&gt;Cloud&lt;/code&gt;. This article documents how to install and configure Docker CE in GNU/Linux.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Life Cycle Info For Mainstream GNU Linux Distributions</title>
+      <link>https://luolvshi.me/hugo2/2017/product-support-life-cycle-info-for-mainstream-gnu-linux-distributions/</link>
+      <pubDate>Mon, 13 Feb 2017 13:40:36 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2017/product-support-life-cycle-info-for-mainstream-gnu-linux-distributions/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.gnu.org&#34; title=&#34;GNU Operating System&#34;&gt;GNU/Linux&lt;/a&gt; is a open source operating system, it consists of &lt;a href=&#34;linuxkernel&#34;&gt;Linux kernel&lt;/a&gt; and a piece of programs. It has many distributions, &lt;a href=&#34;https://www.redhat.com/en&#34; title=&#34;RedHat&#34;&gt;RHEL&lt;/a&gt;/&lt;a href=&#34;https://www.centos.org&#34; title=&#34;CentOS&#34;&gt;CentOS&lt;/a&gt;、 &lt;a href=&#34;https://www.debian.org&#34; title=&#34;Debian&#34;&gt;Debian&lt;/a&gt;/&lt;a href=&#34;https://www.ubuntu.com&#34; title=&#34;Ubuntu&#34;&gt;Ubuntu&lt;/a&gt;、&lt;a href=&#34;https://www.suse.com&#34; title=&#34;SUSE&#34;&gt;SUSE&lt;/a&gt;/&lt;a href=&#34;https://www.opensuse.org&#34; title=&#34;OpenSUSE&#34;&gt;OpenSUSE&lt;/a&gt; are mainstream distributions. In order to extract the product support life cycle info, I wrote a &lt;a href=&#34;https://github.com/MaxdSre/axd-ShellScript/blob/master/assets/gnulinux/gnuLinuxLifeCycleInfo.sh&#34;&gt;Shell script&lt;/a&gt; to extract relevant info from their official site.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Setting Up Tor Browser On GNU/Linux</title>
+      <link>https://luolvshi.me/hugo2/2016/setting-up-tor-browser-on-gnu-linux/</link>
+      <pubDate>Thu, 22 Dec 2016 18:45:24 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/setting-up-tor-browser-on-gnu-linux/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.torproject.org/projects/torbrowser.html.en&#34;&gt;Tor Browser&lt;/a&gt;是由&lt;a href=&#34;https://www.torproject.org&#34;&gt;Tor Project&lt;/a&gt;推出的一款集成了&lt;a href=&#34;https://www.torproject.org/&#34;&gt;Tor&lt;/a&gt;，&lt;a href=&#34;https://www.mozilla.org/en-US/firefox/organizations/&#34;&gt;Firefox ESR&lt;/a&gt;, &lt;a href=&#34;https://www.torproject.org/docs/torbutton/&#34;&gt;Torbutton&lt;/a&gt;, &lt;a href=&#34;https://github.com/micahflee/torbrowser-launcher&#34;&gt;TorLauncher&lt;/a&gt;, &lt;a href=&#34;https://noscript.net&#34;&gt;NoScript&lt;/a&gt;,和 &lt;a href=&#34;https://www.eff.org/https-everywhere&#34;&gt;HTTPS-Everywhere&lt;/a&gt;的瀏覽器。&lt;a href=&#34;https://www.torproject.org/projects/torbrowser.html.en&#34;&gt;Tor Browser&lt;/a&gt;默認監聽&lt;code&gt;9150&lt;/code&gt;、&lt;code&gt;9151&lt;/code&gt;端口，通過&lt;a href=&#34;https://en.wikipedia.org/wiki/Tor_(anonymity_network)&#34; title=&#34;WikiPedia&#34;&gt;Tor (anonymity network)&lt;/a&gt;實現匿名訪問，保障用戶隱私。&lt;/p&gt;
+
+&lt;p&gt;本文記錄如何在GNU/Linux中下載、校驗、安裝&lt;a href=&#34;https://www.torproject.org/projects/torbrowser.html.en&#34;&gt;Tor Browser&lt;/a&gt;及在&lt;a href=&#34;https://www.gnome.org&#34;&gt;GNOME&lt;/a&gt;桌面中創建快捷圖標。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Analying The Change Frequency Of Active Users Tokens From Tomcat Logs</title>
+      <link>https://luolvshi.me/hugo2/2016/analying-the-change-frequency-of-active-users-tokens-from-tomcat-logs/</link>
+      <pubDate>Mon, 05 Dec 2016 07:43:08 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/analying-the-change-frequency-of-active-users-tokens-from-tomcat-logs/</guid>
+      
+        <description>&lt;p&gt;接到Java開發人員的需求,從Tomcat日誌中提取最近一個月查詢、購票活躍度最高的5位iOS用戶的token變更頻率。日誌文件在線上生產服務器中，單個文件高達十數GB，無法使用&lt;code&gt;vim&lt;/code&gt;打開，只能下載到本機後再進行數據提取操作，以下是完整的記錄。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Self-Developing Asset Management Platform Based On Symfony Framework</title>
+      <link>https://luolvshi.me/hugo2/2016/self-developing-asset-management-platform-based-on-symfony-framework/</link>
+      <pubDate>Tue, 15 Nov 2016 17:54:13 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/self-developing-asset-management-platform-based-on-symfony-framework/</guid>
+      
+        <description>&lt;p&gt;根據公司直屬領導指示，進行 &lt;strong&gt;資產管理系統平臺&lt;/strong&gt; 的開發，整個項目由本人獨立完成，項目週期2個月左右，現已部署上線，可通過公司內網訪問。&lt;/p&gt;
+
+&lt;p&gt;因本人此前從事&lt;a href=&#34;https://secure.php.net&#34; title=&#34;PHP is a popular general-purpose scripting language that is especially suited to web development.&#34;&gt;PHP&lt;/a&gt;開發，故選擇&lt;a href=&#34;https://secure.php.net&#34; title=&#34;PHP is a popular general-purpose scripting language that is especially suited to web development.&#34;&gt;PHP&lt;/a&gt;做爲開發語言，開發框架選擇&lt;a href=&#34;https://symfony.com&#34; title=&#34;High Performance PHP Framework for Web Development&#34;&gt;Symfony&lt;/a&gt;。如何部署Symfony項目，詳見本人 &lt;a href=&#34;https://luolvshi.me/hugo2/hugo2/2016/configuring-nginx-web-server-for-symfony-framework-on-gnu-linux/&#34;&gt;blog&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Configuring Nginx Web Server For Symfony Framework On GNU Linux</title>
+      <link>https://luolvshi.me/hugo2/2016/configuring-nginx-web-server-for-symfony-framework-on-gnu-linux/</link>
+      <pubDate>Tue, 15 Nov 2016 17:18:20 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/configuring-nginx-web-server-for-symfony-framework-on-gnu-linux/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://symfony.com&#34; title=&#34;High Performance PHP Framework for Web Development&#34;&gt;Symfony&lt;/a&gt;是一款&lt;a href=&#34;https://secure.php.net&#34; title=&#34;PHP is a popular general-purpose scripting language that is especially suited to web development.&#34;&gt;PHP&lt;/a&gt;開發框架，具體安裝、配置可參閱本人之前 &lt;a href=&#34;https://luolvshi.me/hugo2/hugo2/2016/installing-and-setting-up-the-symfony-framework-on-centos-7/&#34;&gt;blog&lt;/a&gt;。本文記錄如何在&lt;a href=&#34;https://www.nginx.com&#34; title=&#34;High Performance Load Balancer, Web Server, &amp;amp; Reverse Proxy&#34;&gt;Nginx&lt;/a&gt;中部署&lt;a href=&#34;https://symfony.com&#34; title=&#34;High Performance PHP Framework for Web Development&#34;&gt;Symfony&lt;/a&gt;項目。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;說明&lt;/strong&gt;：文中的操作、配置基於&lt;a href=&#34;https://symfony.com&#34; title=&#34;High Performance PHP Framework for Web Development&#34;&gt;Symfony 3&lt;/a&gt;（2016年11月），不一定適用於&lt;a href=&#34;https://symfony.com&#34; title=&#34;High Performance PHP Framework for Web Development&#34;&gt;Symfony 4&lt;/a&gt;。此次遷移只做勘誤，不做具體配置的更新（2018年04月16日）。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using Doctrine DBAL To Work With Database In Symfony 4</title>
+      <link>https://luolvshi.me/hugo2/2016/using-doctrine-dbal-to-work-with-database-in-symfony-4/</link>
+      <pubDate>Wed, 24 Aug 2016 04:38:08 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/using-doctrine-dbal-to-work-with-database-in-symfony-4/</guid>
+      
+        <description>&lt;p&gt;Web應用通常使用數據庫存儲數據，&lt;a href=&#34;https://lemp.io/&#34;&gt;&lt;strong&gt;LEMP&lt;/strong&gt;&lt;/a&gt;中的 &lt;strong&gt;M&lt;/strong&gt; 即指數據庫（默認爲 &lt;a href=&#34;https://www.mysql.com&#34; title=&#34;MySQL is the world&#39;s most popular open source database.&#34;&gt;MySQL&lt;/a&gt;）。PHP框架&lt;a href=&#34;https://symfony.com&#34; title=&#34;High Performance PHP Framework for Web Development&#34;&gt;Symfony&lt;/a&gt;是通過集成的第三方庫 &lt;a href=&#34;https://www.doctrine-project.org&#34; title=&#34;The Open-Source PHP ORM and Persistence Tools Project&#34;&gt;Doctrine&lt;/a&gt; 與數據庫交互（通過&lt;a href=&#34;https://getcomposer.org&#34; title=&#34;Dependency Manager for PHP&#34;&gt;Composer&lt;/a&gt;安裝）。&lt;a href=&#34;https://www.doctrine-project.org&#34; title=&#34;The Open-Source PHP ORM and Persistence Tools Project&#34;&gt;Doctrine&lt;/a&gt;支持2中形式 &lt;a href=&#34;https://symfony.com/doc/master/doctrine.html&#34;&gt;Doctrine ORM&lt;/a&gt; 和 &lt;a href=&#34;https://www.doctrine-project.org/projects/dbal.html&#34; title=&#34;Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection, schema management and PDO abstraction.&#34;&gt;Doctrine DBAL&lt;/a&gt;。&lt;code&gt;DBAL&lt;/code&gt;是&lt;code&gt;Database Abstraction Layer&lt;/code&gt;（數據庫抽象層）的縮寫，&lt;a href=&#34;https://www.doctrine-project.org/projects/dbal.html&#34; title=&#34;Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection, schema management and PDO abstraction.&#34;&gt;Doctrine DBAL&lt;/a&gt;支持原生的SQL語句。&lt;/p&gt;
+
+&lt;p&gt;本文記錄如何在&lt;a href=&#34;https://symfony.com&#34; title=&#34;High Performance PHP Framework for Web Development&#34;&gt;Symfony 4&lt;/a&gt;中通過&lt;a href=&#34;https://www.doctrine-project.org/projects/dbal.html&#34; title=&#34;Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection, schema management and PDO abstraction.&#34;&gt;Doctrine DBAL&lt;/a&gt;進行數據庫的&lt;a href=&#34;https://en.wikipedia.org/wiki/Create,_read,_update_and_delete&#34; title=&#34;wikipedia&#34;&gt;CRUD&lt;/a&gt;操作。（與Symfony 3相比，變動很大）&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Installing And Setting Up The Symfony Framework On CentOS 7</title>
+      <link>https://luolvshi.me/hugo2/2016/installing-and-setting-up-the-symfony-framework-on-centos-7/</link>
+      <pubDate>Tue, 23 Aug 2016 21:03:16 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/installing-and-setting-up-the-symfony-framework-on-centos-7/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://symfony.com&#34; title=&#34;High Performance PHP Framework for Web Development&#34;&gt;Symfony&lt;/a&gt;是一款&lt;a href=&#34;https://secure.php.net&#34; title=&#34;PHP is a popular general-purpose scripting language that is especially suited to web development.&#34;&gt;PHP&lt;/a&gt;開發框架，目前最新版本是&lt;code&gt;4.0&lt;/code&gt;，長期支持版是&lt;code&gt;3.4&lt;/code&gt;。本文記錄如何在&lt;code&gt;CentOS 7&lt;/code&gt;中安裝、配置Symfony 4。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://symfony.com&#34; title=&#34;High Performance PHP Framework for Web Development&#34;&gt;Symfony&lt;/a&gt;官方文檔頁 &lt;a href=&#34;https://symfony.com/doc/current/index.html&#34;&gt;https://symfony.com/doc/current/index.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using Awk To Extract Statistic Results From Multiple Log Files</title>
+      <link>https://luolvshi.me/hugo2/2016/using-awk-to-extract-statistic-results-from-multiple-log-files/</link>
+      <pubDate>Wed, 13 Jul 2016 12:36:37 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/using-awk-to-extract-statistic-results-from-multiple-log-files/</guid>
+      
+        <description>&lt;p&gt;工作中遇到一個需求：從日誌文件中提取符合指定條件的數據，獲取其出現頻次(條件有多種、日誌有多個)。存有日誌的服務器是線上運行的服務器，直接在其上進行操作會對服務器造成較大壓力。故需對日誌進行轉移，而其又是內網服務器，只能通過跳板機登錄，故將相關日誌複製到跳板機中再進行操作。&lt;/p&gt;
+
+&lt;p&gt;個人研究後，使用&lt;code&gt;awk&lt;/code&gt;命令解決，以下是操作過程和撰寫的Shell腳本。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>GNU/Linux Post Installation Configuration Full Record</title>
+      <link>https://luolvshi.me/hugo2/2016/gnu-linux-post-installation-configuration-full-record/</link>
+      <pubDate>Fri, 17 Jun 2016 11:30:54 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/gnu-linux-post-installation-configuration-full-record/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.gnu.org&#34; title=&#34;GNU Operating System&#34;&gt;GNU/Linux&lt;/a&gt;安裝完成後，需要進行一系列的初始化配置才能滿足使用需求。本文詳細記錄各初始化操作，並用Shell腳本實現相關過程（在&lt;code&gt;root&lt;/code&gt;模式中操作）。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Building Docker Private Registry With Self-signed Certificate</title>
+      <link>https://luolvshi.me/hugo2/2016/building-docker-private-registry-with-self-signed-certificate/</link>
+      <pubDate>Mon, 06 Jun 2016 22:06:13 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/building-docker-private-registry-with-self-signed-certificate/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.docker.com&#34; title=&#34;Docker&#34;&gt;Docker&lt;/a&gt;是一款開源的，提供&lt;code&gt;Operating-system-level virtualization&lt;/code&gt;(操作系統級別的虛擬化的)容器(container)產品，可實現在軟件容器中自動部署應用。本文主要記錄如何&lt;a href=&#34;https://www.docker.com&#34; title=&#34;Docker&#34;&gt;Docker&lt;/a&gt;的&lt;a href=&#34;https://hub.docker.com/_/registry/&#34;&gt;Registry&lt;/a&gt;創建私有倉庫，並通過自簽證書實現通過域名訪問私有倉庫。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Crawling China Administrative Division Code</title>
+      <link>https://luolvshi.me/hugo2/2016/crawling-china-administrative-division-code/</link>
+      <pubDate>Mon, 14 Mar 2016 00:01:59 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/crawling-china-administrative-division-code/</guid>
+      
+        <description>&lt;p&gt;本文記錄如何從&lt;a href=&#34;http://www.stats.gov.cn&#34;&gt;中華人民共和國國家統計局&lt;/a&gt;官網提取中國大陸地區的行政區劃信息，數據入庫，並通過Shell腳本實現整個過程。項目代碼託管在&lt;a href=&#34;https://github.com/MaxdSre/Shell-script-web-crawler/tree/master/project/CADC&#34;&gt;GitHub&lt;/a&gt;，包含Shell腳本、數據庫數據表、文本數據、從MySQL中導出的SQL數據。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>LEMP Stack Installation And Configuration On CentOS 7</title>
+      <link>https://luolvshi.me/hugo2/2016/lemp-stack-installation-and-configuration-on-centos-7/</link>
+      <pubDate>Fri, 11 Mar 2016 18:31:58 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/lemp-stack-installation-and-configuration-on-centos-7/</guid>
+      
+        <description>&lt;p&gt;This article documents how to install, configure &lt;strong&gt;LEMP&lt;/strong&gt; (&lt;a href=&#34;https://www.nginx.com&#34; title=&#34;High Performance Load Balancer, Web Server, &amp;amp; Reverse Proxy&#34;&gt;Nginx&lt;/a&gt;、&lt;a href=&#34;https://www.mysql.com&#34; title=&#34;MySQL is the world&#39;s most popular open source database.&#34;&gt;MySQL&lt;/a&gt;、&lt;a href=&#34;https://secure.php.net&#34; title=&#34;PHP is a popular general-purpose scripting language that is especially suited to web development.&#34;&gt;PHP&lt;/a&gt;) stack in &lt;code&gt;CentOS 7&lt;/code&gt; which &lt;code&gt;SELinux&lt;/code&gt;、&lt;code&gt;Firewalld&lt;/code&gt; has been enabled.&lt;/p&gt;
+
+&lt;p&gt;I wrote some shell script to automate operation, the project is hosted on &lt;a href=&#34;https://github.com/MaxdSre/axd-ShellScript&#34; title=&#34;axd Shell Script&#34;&gt;GitHub&lt;/a&gt;. But &lt;a href=&#34;https://secure.php.net&#34; title=&#34;PHP is a popular general-purpose scripting language that is especially suited to web development.&#34;&gt;PHP&lt;/a&gt; is still need to installed manually currently.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>A Complete Intrduction To Markdown Syntax</title>
+      <link>https://luolvshi.me/hugo2/2016/a-complete-intrduction-to-markdown-syntax/</link>
+      <pubDate>Mon, 25 Jan 2016 22:04:52 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/a-complete-intrduction-to-markdown-syntax/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34; title=&#34;Markdown&#34;&gt;Markdown&lt;/a&gt;是一種輕量級的標記語言，採用純文本語法格式，文件後綴爲&lt;code&gt;.md&lt;/code&gt;。&lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34; title=&#34;Markdown&#34;&gt;Markdown&lt;/a&gt;應用廣泛，常用於撰寫&lt;a href=&#34;https://en.wikipedia.org/wiki/README&#34; title=&#34;WikiPedia&#34;&gt;README&lt;/a&gt;。&lt;a href=&#34;https://jekyllrb.com&#34; title=&#34;Jekyll is a simple, blog-aware, static site generator&#34;&gt;Jekyll&lt;/a&gt;, &lt;a href=&#34;https://hexo.io&#34; title=&#34;A fast, simple &amp;amp; powerful blog framework&#34;&gt;Hexo&lt;/a&gt;, &lt;a href=&#34;https://gohugo.io&#34; title=&#34;The world’s fastest framework for building websites&#34;&gt;Hugo&lt;/a&gt;等靜態Blog框架支持Markdown語法，&lt;a href=&#34;https://www.digitalocean.com&#34; title=&#34;Digital Ocean&#34;&gt;Digital Ocean&lt;/a&gt;、&lt;a href=&#34;https://stackoverflow.com&#34; title=&#34;Stack Overflow&#34;&gt;Stack Overflow&lt;/a&gt;等網站也支持Markdown語法。只是各家對Markdown的語法解釋不盡相同，如對&lt;code&gt;TOC&lt;/code&gt;、&lt;code&gt;Diagram&lt;/code&gt;、&lt;code&gt;LaTeX&lt;/code&gt;的支持。&lt;/p&gt;
+
+&lt;p&gt;本文詳細介紹&lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34; title=&#34;Markdown&#34;&gt;Markdown&lt;/a&gt;的語法、使用。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using Google Authenticator To Set Up Multi-Factor Authentication On GNU/Linux</title>
+      <link>https://luolvshi.me/hugo2/2016/using-google-authenticator-to-set-up-multi-factor-authentication-on-gnu-linux/</link>
+      <pubDate>Mon, 25 Jan 2016 21:01:52 +0800</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2016/using-google-authenticator-to-set-up-multi-factor-authentication-on-gnu-linux/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Linux_PAM&#34; title=&#34;Wikipedia&#34;&gt;PAM&lt;/a&gt;是一種動態認證機制，通過多重認證提升系統安全係數。&lt;a href=&#34;https://en.wikipedia.org/wiki/Google_Authenticator&#34;&gt;Google Authenticator&lt;/a&gt;是基於&lt;a href=&#34;https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm&#34; title=&#34;WikiPedia&#34;&gt;TOTP&lt;/a&gt;和&lt;a href=&#34;https://en.wikipedia.org/wiki/HMAC-based_One-time_Password_Algorithm&#34; title=&#34;WikiPedia&#34;&gt;HOTP&lt;/a&gt;的2步認證應用，通過移動端的&lt;code&gt;Google Authenticator&lt;/code&gt;應用生成token(存活期30秒)。&lt;/p&gt;
+
+&lt;p&gt;本文記錄利用其為GNU/Linux桌面系統、遠程SSH連接配置2步認證，並通過Shell Script實現相關功能。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

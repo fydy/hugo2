@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Using Hugo and Travis CI To Deploy Blog To Github Pages Automatically - 云溪部落</title>
+  <link rel="alternate" hreflang="en" href="https://luolvshi.me/hugo2" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Window-Target" content="_value"> 
+<meta name="robots" content="index,follow"> 
+<meta name="googlebot" content="index,follow"> 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="MaxdSre" /><meta name="description" content="Using Hugo and Travis CI to deploy personal blog to Github pages automatically" />
+<meta name="keywords" content="AxdLog, Hugo, Travis CI, GitHub Pages, Git, Automatic deployment" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="https://luolvshi.me/hugo2/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/" />
+
+
+
+<link rel="icon" href="/hugo2/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/hugo2/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Using Hugo and Travis CI To Deploy Blog To Github Pages Automatically" />
+<meta property="og:description" content="Using Hugo and Travis CI to deploy personal blog to Github pages automatically" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://luolvshi.me/hugo2/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/" />
+
+
+
+<meta property="article:published_time" content="2018-04-11T00:20:07-04:00"/>
+
+<meta property="article:modified_time" content="2018-04-11T00:20:07-04:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Using Hugo and Travis CI To Deploy Blog To Github Pages Automatically">
+<meta itemprop="description" content="Using Hugo and Travis CI to deploy personal blog to Github pages automatically">
+
+
+<meta itemprop="datePublished" content="2018-04-11T00:20:07-04:00" />
+<meta itemprop="dateModified" content="2018-04-11T00:20:07-04:00" />
+<meta itemprop="wordCount" content="1677">
+
+
+
+<meta itemprop="keywords" content="Github,Hugo,Travis CI,Git," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using Hugo and Travis CI To Deploy Blog To Github Pages Automatically"/>
+<meta name="twitter:description" content="Using Hugo and Travis CI to deploy personal blog to Github pages automatically"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/hugo2/" class="logo">AxdLog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        <a href="/hugo2/post/">Archives</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/tags/">Tags</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/categories/">Categories</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/about/">About</a>
+      </li>
+    
+      
+      <li class="mobile-menu-item">
+        <a class="" href="https://luolvshi.me/hugo2/zh/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/hugo2/" class="logo">
+    
+      AxdLog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+      
+      <li class="menu-item">
+        <a class="menu-item-link" href="https://luolvshi.me/hugo2/zh/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Using Hugo and Travis CI To Deploy Blog To Github Pages Automatically</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> Apr 11, 2018 </span>
+        <div class="post-category">
+            
+              <a href="/hugo2/categories/blog/"> Blog </a>
+            
+          </div>
+        <span class="more-meta"> 1677 words </span>
+        
+        
+        
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2018/using-hugo-and-travis-ci-to-deploy-blog-to-github-pages-automatically/"><b>漢文版</b></a></span>
+  
+
+
+
+
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#prerequisite">Prerequisite</a></li>
+<li><a href="#official-docs">Official Docs</a></li>
+<li><a href="#hugo-installation">Hugo Installation</a>
+<ul>
+<li><a href="#create-a-new-site">Create A New Site</a></li>
+</ul></li>
+<li><a href="#github-repository-operation">Github Repository Operation</a>
+<ul>
+<li><a href="#create-empty-repository">Create Empty Repository</a></li>
+<li><a href="#pushing-repository">Pushing Repository</a>
+<ul>
+<li><a href="#branch-code">Branch code</a></li>
+<li><a href="#branch-master">Branch master</a></li>
+<li><a href="#branch-image">Branch image</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#travis-ci-configuration">Travis CI Configuration</a>
+<ul>
+<li><a href="#github-access-token-generation">Github Access Token Generation</a></li>
+<li><a href="#environment-variables-setting">Environment Variables Setting</a></li>
+<li><a href="#travis-yml-directives">.travis.yml directives</a></li>
+</ul></li>
+<li><a href="#continuous-integration">Continuous Integration</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#change-logs">Change logs</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>My personal static blog is hosted on <a href="https://github.com">Github</a>. I used <a href="https://hexo.io" title="A fast, simple &amp; powerful blog framework">Hexo</a> before, but as its complicated package dependence and cumbersome deployment process, I have to encapsulated the whole deploying environment into Docker image for rapid deployment. But it was still too complex. Now I switch to <a href="https://gohugo.io" title="The world’s fastest framework for building websites">Hugo</a> which is faster, simpler.</p>
+
+<p>This article documents how to automatically synchronize blog contents generated by <a href="https://gohugo.io" title="The world’s fastest framework for building websites">Hugo</a> to <a href="https://github.com">Github</a> through <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a>.</p>
+
+<p><strong>Attention</strong>: The following operation process will not involve account registration, Git configuration.</p>
+
+<p></p>
+
+<h2 id="prerequisite">Prerequisite</h2>
+
+<ol>
+<li>Registering a <a href="https://github.com">Github</a> account;</li>
+<li>Registering a <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a> account (login with Github account);</li>
+<li>Installing <code>git</code>, <code>hugo</code> in your system;</li>
+<li>Personal domain (optional, here my domain is <code>axdlog.com</code>);</li>
+</ol>
+
+<h2 id="official-docs">Official Docs</h2>
+
+<p>The relevant operations in this document are based on the official document as the operation credentials:</p>
+
+<ul>
+<li>Github
+
+<ul>
+<li><a href="https://help.github.com/categories/github-pages-basics/">GitHub Pages Basics</a></li>
+<li><a href="https://help.github.com/articles/user-organization-and-project-pages/">User, Organization, and Project Pages</a></li>
+<li><a href="https://help.github.com/articles/creating-project-pages-using-the-command-line/">Creating Project Pages using the command line</a></li>
+<li><a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">Configuring a publishing source for GitHub Pages</a></li>
+</ul></li>
+<li>Hugo
+
+<ul>
+<li><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub</a></li>
+</ul></li>
+<li>Travis CI
+
+<ul>
+<li><a href="https://docs.travis-ci.com/user/deployment/pages/" title="Travis CI - GitHub Pages Deployment">GitHub Pages Deployment</a></li>
+<li><a href="https://docs.travis-ci.com/user/languages/python/">Building a Python Project</a></li>
+<li><a href="https://docs.travis-ci.com/user/best-practices-security/">Best Practices in Securing Your Data</a></li>
+<li><a href="https://docs.travis-ci.com/user/customizing-the-build/">Customizing the Build</a></li>
+</ul></li>
+</ul>
+
+<h2 id="hugo-installation">Hugo Installation</h2>
+
+<ul>
+<li>Github url: <a href="https://github.com/gohugoio/hugo">https://github.com/gohugoio/hugo</a></li>
+<li>Downloading page: <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></li>
+<li>Release Info API:  <a href="https://api.github.com/repos/gohugoio/hugo/releases/latest">https://api.github.com/repos/gohugoio/hugo/releases/latest</a></li>
+</ul>
+
+<p><a href="https://gohugo.io/getting-started/installing/">Install Hugo</a> is the official installation document of <a href="https://gohugo.io" title="The world’s fastest framework for building websites">Hugo</a>. If you&rsquo;re using GNU/Linux, you may consider using my <a href="https://github.com/MaxdSre/Python-learning-quiz/blob/master/LearningQuiz/Hugo-StaticSiteGeneratorInstallation.ipynb">Python script</a> to install it.</p>
+
+<p>Current release version info</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># which hugo
+</span><span class="c1"></span>/usr/local/bin/hugo
+
+<span class="c1"># hugo version
+</span><span class="c1"></span>Hugo Static Site Generator v0.38.2 linux/amd64 BuildDate: <span class="m">2018</span>-04-09T08:17:17Z</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="create-a-new-site">Create A New Site</h3>
+
+<p>You can reference official document <a href="https://gohugo.io/getting-started/">Get Started</a>、<a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a> to know how to create a new site through <a href="https://gohugo.io" title="The world’s fastest framework for building websites">Hugo</a>.</p>
+
+<blockquote>
+<p>If this is your first time using Hugo and you’ve <a href="https://gohugo.io/getting-started/installing/">already installed Hugo on your machine</a>, we recommend the <a href="https://gohugo.io/getting-started/quick-start/">quick start</a>.</p>
+</blockquote>
+
+<p>Here I name the site to <code>quickstart</code> (it is just the directory name, not the final site name).</p>
+
+<p>Generated directory structure by Hugo:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># tree -L 2
+</span><span class="c1"></span>.
+├── archetypes
+│   └── default.md
+├── config.toml
+├── content
+│   ├── about.md
+│   └── post
+├── data
+├── layouts
+├── static
+└── themes
+    └── even
+
+<span class="m">8</span> directories, <span class="m">3</span> files</code></pre></td></tr></table>
+</div>
+</div>
+<p><strong>Attention</strong>: These files are not the final blog contents, they are just used to generate the blog contents.</p>
+
+<p>Directory <code>content</code> is used to store your blog file (Markdown file).</p>
+
+<p>If you wanna preview the final effect, just executing command <code>hugo server</code> to set up a local server which is listening port <code>1313</code>. And opening the link in your browser.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">Web Server is available at http://localhost:1313/ <span class="o">(</span><span class="nb">bind</span> address <span class="m">127</span>.0.0.1<span class="o">)</span>
+Press Ctrl+C to stop</code></pre></td></tr></table>
+</div>
+</div>
+<p>Executing command <code>hugo</code> in your project directory, it will generate a directory named <code>public</code>. This directory contains the final blog contents. What you need to do is push all the files in this directory to the branch <code>master</code> of your GitHub repository.</p>
+
+<p>The demonstration process is as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># hugo
+</span><span class="c1"></span>
+                   <span class="p">|</span> EN   
++------------------+-----+
+  Pages            <span class="p">|</span> <span class="m">426</span>  
+  Paginator pages  <span class="p">|</span>  <span class="m">24</span>  
+  Non-page files   <span class="p">|</span>   <span class="m">0</span>  
+  Static files     <span class="p">|</span>  <span class="m">34</span>  
+  Processed images <span class="p">|</span>   <span class="m">0</span>  
+  Aliases          <span class="p">|</span>  <span class="m">95</span>  
+  Sitemaps         <span class="p">|</span>   <span class="m">1</span>  
+  Cleaned          <span class="p">|</span>   <span class="m">0</span>  
+
+Total in <span class="m">403</span> ms
+
+<span class="c1"># tree -L 1
+</span><span class="c1"></span>.
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── public
+├── static
+└── themes
+
+<span class="m">7</span> directories, <span class="m">1</span> file</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="github-repository-operation">Github Repository Operation</h2>
+
+<p><strong>Important</strong>: The handling ideas and operations of this section are very important. Not involving Git setting procedure.</p>
+
+<p>If you use Github Page to host blog, you need to create a repository named <code>&lt;username&gt;.github.io</code>. Then putting the files generated by Hugo to the branch <code>master</code> of this repository.</p>
+
+<p>I create 2 branches via command <code>git checkout --orphan</code> to store source files and blog contents in directory <code>public</code> separately.</p>
+
+<ul>
+<li>branch <code>code</code> stores source files;</li>
+<li>branch <code>master</code> stores blog contents in directory <code>public</code>;</li>
+</ul>
+
+<p>Attention please, this method is different from official document <a href="https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/">Configuring a publishing source for GitHub Pages</a>.</p>
+
+<h3 id="create-empty-repository">Create Empty Repository</h3>
+
+<p>My GitHub account is <code>MaxdSre</code>, so I need to create a repository named <code>maxdsre.github.io</code>.</p>
+
+<p>After creating the repository, it will prompts</p>
+
+<blockquote>
+<p>or create a new repository on the command line</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;# maxdsre.github.io&#34;</span> &gt;&gt; README.md
+git init
+git add README.md
+git commit -m <span class="s2">&#34;first commit&#34;</span>
+git remote add origin git@github.com:MaxdSre/maxdsre.github.io.git
+git push -u origin master</code></pre></td></tr></table>
+</div>
+</div>
+<blockquote>
+<p>or push an existing repository from the command line</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git remote add origin git@github.com:MaxdSre/maxdsre.github.io.git
+git push -u origin master</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="pushing-repository">Pushing Repository</h3>
+
+<p>There are 4 steps:</p>
+
+<ol>
+<li>Initializing Git repository via command <code>git init</code> in project directory;</li>
+<li>Creating branch <code>code</code>, pushing source files to remote repository;</li>
+<li>Executing command <code>hugo</code> to generate <code>public</code> directory; Transferring all the files in this directory to another temporary directory, empty project directory, then move the files store in temporary directory back to project directory;</li>
+<li>Creating branch <code>master</code> via command <code>git checkout --orphan</code>, then pushing all files store in current directory to remote repository.</li>
+</ol>
+
+<p>Entering the target directory (here is <code>/PATH/quickstart/</code>), then executing the following commands in sequence.</p>
+
+<h4 id="branch-code">Branch code</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Initialized empty Git repository in /PATH/.git/
+</span><span class="c1"></span>git init
+
+<span class="c1"># Switched to a new branch &#39;code&#39;, equal to &#39;git branch code &amp;&amp; git checkout code&#39;
+</span><span class="c1"></span>git checkout -b code
+
+<span class="c1"># exclude dir public/
+</span><span class="c1"></span><span class="nb">echo</span> <span class="s1">&#39;/public/&#39;</span> &gt;&gt; .gitignore
+sed -r -i <span class="s1">&#39;/^\/public\/$/{$!d}&#39;</span> .gitignore
+
+<span class="c1"># Add file contents to the index
+</span><span class="c1"></span>git add .
+
+<span class="c1"># Show the working tree status
+</span><span class="c1"># git status
+</span><span class="c1"></span>
+<span class="c1"># Record changes to the repository
+</span><span class="c1"></span>git commit -m <span class="s2">&#34;Hugo generator code&#34;</span>
+
+<span class="c1"># Manage set of tracked repositories
+</span><span class="c1"></span>git remote add origin git@github.com:MaxdSre/maxdsre.github.io.git
+
+<span class="c1"># Update remote refs along with associated objects to branch &#39;code&#39;
+</span><span class="c1"></span>git push -u origin code</code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="branch-master">Branch master</h4>
+
+<p>Executing command <code>hugo</code> in project directly to generate directly <code>public</code>. If you wanna check the branch info of this repository, just executing command <code>git branch -a</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># execute command hugo
+</span><span class="c1"></span>hugo
+
+<span class="c1"># create temporary dir
+</span><span class="c1"></span><span class="nv">HUGO_TEMP_DIR</span><span class="o">=</span><span class="k">$(</span>mktemp -d<span class="k">)</span>
+cp -R public/* <span class="s2">&#34;</span><span class="nv">$HUGO_TEMP_DIR</span><span class="s2">&#34;</span>
+
+<span class="c1"># create orphan branch &#39;master&#39;
+</span><span class="c1"></span>git checkout --orphan master
+
+<span class="c1"># empty current dir
+</span><span class="c1"></span>rm .git/index
+git clean -fdx
+
+<span class="c1"># copy back contents in dir public/
+</span><span class="c1"></span>cp -R <span class="s2">&#34;</span><span class="nv">$HUGO_TEMP_DIR</span><span class="s2">&#34;</span>/. .
+
+<span class="c1"># add, commit, push
+</span><span class="c1"></span>git add .
+<span class="c1"># git status
+</span><span class="c1"></span>git commit -m <span class="s1">&#39;initial blog content&#39;</span>
+git push -u origin master
+
+<span class="c1"># remove temp dir
+</span><span class="c1"></span><span class="o">[[</span> -d <span class="s2">&#34;</span><span class="nv">$HUGO_TEMP_DIR</span><span class="s2">&#34;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> rm -rf <span class="s2">&#34;</span><span class="nv">$HUGO_TEMP_DIR</span><span class="s2">&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h4 id="branch-image">Branch image</h4>
+
+<p>This section is optional. In order to store images in GitHub directly, I create the third branch <code>image</code>. All images used in blog will be saved in this branch.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git checkout --orphan image
+rm .git/index
+git clean -fdx
+
+<span class="c1"># add content to this branch
+</span><span class="c1"></span>
+git add .
+git commit -m <span class="s1">&#39;initial blog images&#39;</span>
+git push -u origin image</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="travis-ci-configuration">Travis CI Configuration</h2>
+
+<p><a href="https://docs.travis-ci.com/user/deployment/pages/" title="Travis CI - GitHub Pages Deployment">GitHub Pages Deployment</a> is the official document of <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a>。</p>
+
+<h3 id="github-access-token-generation">Github Access Token Generation</h3>
+
+<blockquote>
+<p>You’ll need to generate a <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">personal access token</a> with the public_repo or repo scope (repo is required for private repositories). Since the token should be private, you’ll want to pass it to Travis securely in your <a href="https://docs.travis-ci.com/user/environment-variables#Defining-Variables-in-Repository-Settings">repository settings</a> or via <a href="https://docs.travis-ci.com/user/environment-variables#Defining-encrypted-variables-in-.travis.yml">encrypted variables</a> in .travis.yml.</p>
+</blockquote>
+
+<p>Generating <code>personal access tokens</code> in GitHub page <a href="https://github.com/settings/tokens">Developer settings</a>. If it is a private repository, choose <code>repo</code>. Otherwise, just choose <code>public_repo</code>. Here I choose <code>public_repo</code>, <code>repo:status</code>, <code>repo_deployment</code>.</p>
+
+<p>The length of the generated token is 40, please keep is private.</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-10-go_travisci_github_page/2018-04-11_00-13-54-github-access-token.png" alt="" /></p>
+
+<h3 id="environment-variables-setting">Environment Variables Setting</h3>
+
+<p>Generated <code>token</code> is used in <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a>, the page url of target repository in <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a> is  <a href="https://travis-ci.org/MaxdSre/maxdsre.github.io/settings">https://travis-ci.org/MaxdSre/maxdsre.github.io/settings</a>.</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-10-go_travisci_github_page/2018-04-11_00-11-05-travisci-system-var-setting.png" alt="" /></p>
+
+<p>Don&rsquo;t forget to check <code>Build only if .travis.yml is present</code>, <code>Build pushed branches</code>, <code>Build pushed pull requests</code>.</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-10-go_travisci_github_page/2018-04-11_00-10-39-travisci-general-setting.png" alt="" /></p>
+
+<p>The default name of <code>token</code> defined in official document <a href="https://docs.travis-ci.com/user/deployment/pages/" title="Travis CI - GitHub Pages Deployment">GitHub Pages Deployment</a> is <code>GITHUB_TOKEN</code>, this document alse lists other directives.</p>
+
+<blockquote>
+<p>Notice that the values are not escaped when your builds are executed. Special characters (for bash) should be escaped accordingly.</p>
+</blockquote>
+
+<p>Defining variables, it will be used in file <code>.travis.yml</code> latter.</p>
+
+<table>
+<thead>
+<tr>
+<th>Environment Variables</th>
+<th>Value</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>GITHUB_USERNAME</td>
+<td>MaxdSre</td>
+</tr>
+
+<tr>
+<td>GITHUB_EMAIL</td>
+<td>maxdsre@gmail.com</td>
+</tr>
+
+<tr>
+<td>GITHUB_TOKEN</td>
+<td>75e8b72618ebf48df0b235cp4affd79e167b2489 (假設值)</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="travis-yml-directives">.travis.yml directives</h3>
+
+<p><a href="https://gohugo.io" title="The world’s fastest framework for building websites">Hugo</a> is written by Golang. So I chose <code>language: go</code> in <code>.travis.yml</code> primitively, but the process of build Golang environment costed too much time (a few minutes). What worse is the container fail to install <code>hugo</code>. I find someone use Python to deploy successfully, then chose Python as operation environment. As the containers of <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a> is based on Ubuntu, I can use command <code>dpkg</code>, <code>apt-get</code>, but it needs <code>sudo</code> privilege.</p>
+
+<p>Through repeated tests, the final code is as follow</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="c"># https://docs.travis-ci.com/user/deployment/pages/</span><span class="w">
+</span><span class="w"></span><span class="c"># https://docs.travis-ci.com/user/languages/python/</span><span class="w">
+</span><span class="w"></span>language<span class="p">:</span><span class="w"> </span>python<span class="w">
+</span><span class="w">
+</span><span class="w"></span>python<span class="p">:</span><span class="w">
+</span><span class="w">    </span>-<span class="w"> </span><span class="s2">&#34;3.6&#34;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>install<span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="c"># install latest release version</span><span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>wget<span class="w"> </span>$(wget<span class="w"> </span>-qO-<span class="w"> </span>https<span class="p">:</span>//api.github.com/repos/gohugoio/hugo/releases/latest<span class="w"> </span><span class="sd">| sed -r -n &#39;/browser_download_url/{/Linux-64bit.deb/{s@[^:]*:[[:space:]]*&#34;([^&#34;]*)&#34;.*@\1@g;p}}&#39;)
+</span><span class="sd">    - sudo dpkg -i hugo*.deb
+</span><span class="sd">    - pip install Pygments
+</span><span class="sd">    - rm -rf public 2&gt; /dev/null</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>script<span class="p">:</span><span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>hugo<span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>echo<span class="w"> </span><span class="s1">&#39;axdlog.com&#39;</span><span class="w"> </span><span class="sd">&gt; public/CNAME</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>deploy<span class="p">:</span><span class="w">
+</span><span class="w">  </span>provider<span class="p">:</span><span class="w"> </span>pages<span class="w">
+</span><span class="w">  </span>skip-cleanup<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span>github-token<span class="p">:</span><span class="w"> </span>$GITHUB_TOKEN<span class="w">  </span><span class="c"># Set in travis-ci.org dashboard, marked secure</span><span class="w">
+</span><span class="w">  </span>email<span class="p">:</span><span class="w"> </span>$GITHUB_EMAIL<span class="w">
+</span><span class="w">  </span>name<span class="p">:</span><span class="w"> </span>$GITHUB_USERNAME<span class="w">
+</span><span class="w">  </span>verbose<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span>keep-history<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">  </span>local-dir<span class="p">:</span><span class="w"> </span>public<span class="w">
+</span><span class="w">  </span>target_branch<span class="p">:</span><span class="w"> </span>master<span class="w">  </span><span class="c"># branch contains blog content</span><span class="w">
+</span><span class="w">  </span>on<span class="p">:</span><span class="w">
+</span><span class="w">    </span>branch<span class="p">:</span><span class="w"> </span>code<span class="w">  </span><span class="c"># branch contains Hugo generator code</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Writing it into file <code>.travis.yml</code>, and push file <code>.travis.yml</code> to the branch <code>code</code> of remote repository.</p>
+
+<h2 id="continuous-integration">Continuous Integration</h2>
+
+<p>After all operations are finished. If you push your changed source file to branch <code>code</code>. <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a> will automatically execute directives defined in file <code>.travis.yml</code>, then pushing the generated blog contents to branch <code>master</code>.</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-10-go_travisci_github_page/2018-04-11_00-35-56-travisci-deploy-status.png" alt="" /></p>
+
+<p>Deploying log</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-10-go_travisci_github_page/2018-04-11_00-36-29-travisci-deploy-log.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-10-go_travisci_github_page/2018-04-11_00-36-57-travisci-deploy-log.png" alt="" /></p>
+
+<h2 id="references">References</h2>
+
+<ul>
+<li><a href="https://jellis18.github.io/post/2017-12-03-continuous-integration-hugo/">Continuous Integration of Hugo Website using Travis CI and Github</a></li>
+<li><a href="https://github.com/ldez/travis-continuous-delivery-hugo-deploy">Travis continuous delivery</a></li>
+<li><a href="https://medium.com/zendesk-engineering/how-to-create-a-website-like-freshswift-net-using-hugo-travis-ci-and-github-pages-67be6f480298">How to create a website like freshswift.net using Hugo, Travis CI, and GitHub Pages</a></li>
+<li><a href="https://www.leowkahman.com/2017/09/10/gitlab-ci-remove-priority-zero-from-hugo-sitemap/">GitLab CI remove priority zero from Hugo sitemap</a></li>
+</ul>
+
+<h2 id="change-logs">Change logs</h2>
+
+<ul>
+<li>2018-04-11 00:20 Wed America/Boston
+
+<ul>
+<li>first draft</li>
+</ul></li>
+</ul>
+
+<!-- End -->
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">MaxdSre</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">Apr 11, 2018</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/hugo2/tags/github/">Github</a>
+          
+          <a href="/hugo2/tags/hugo/">Hugo</a>
+          
+          <a href="/hugo2/tags/travis-ci/">Travis CI</a>
+          
+          <a href="/hugo2/tags/git/">Git</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/hugo2/2018/using-cloudflare-free-ssl-in-github-pages-with-custom-domain/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Using Cloudflare Free SSL In GitHub Pages With Custom Domain</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/hugo2/2018/cleaning-text-data-which-delimiter-is-special-character-using-sed-and-awk/">
+            <span class="next-text nav-default">Cleaning Text Data Which Delimiter Is Special Character Using Sed &amp; Awk</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+    
+
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+      Show Disqus Comments
+    </div>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    function load_disqus() {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'axdlog';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+        $('#load_disqus').remove();
+    };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+  
+
+  
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/7040344" rel="me noopener" class="iconfont icon-stack-overflow"
+        title="stack-overflow" target="_blank">
+      </a>
+      <a href="https://www.linkedin.com/in/lempstacker" rel="me noopener" class="iconfont icon-linkedin"
+        title="linkedin" target="_blank">
+      </a>
+      <a href="https://github.com/MaxdSre" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://luolvshi.me/hugo2/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    <a class="hexo-link" rel="nofollow" href="https://gohugo.io" title="Hugo">Generator</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    <a class="theme-link" rel="nofollow" href="https://github.com/xianmin/hugo-theme-jane" title="Jane">Theme</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+  <a class="theme-link" rel="nofollow" href="https://www.cloudflare.com" title="CloudFlare">SSL</a>
+  </span>
+  
+  
+  <span class="division">|</span>
+  <span>
+  <a class="theme-link" href="https://luolvshi.me/hugo2/sitemap.xml" >Sitemap</a>
+  </span>
+  <span class="copyright-year">
+    &copy;
+    
+      2016 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">MaxdSre</span></span>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/hugo2/dist/jane.min.js?v=2.7.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/hugo2/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

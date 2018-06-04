@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>云溪部落 - Master Technology, Change Destiny</title>
+  <link rel="alternate" hreflang="en" href="https://luolvshi.me/hugo2" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Window-Target" content="_value"> 
+<meta name="robots" content="index,follow"> 
+<meta name="googlebot" content="index,follow"> 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="MaxdSre" />
+  <meta name="description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing." />
+  <meta name="keywords" content="GNU/Linux, System Administration, DevOps, Shell Script, Python, Security" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="https://luolvshi.me/hugo2/" />
+<link href="https://luolvshi.me/hugo2/index.xml" rel="alternate" type="application/rss+xml" title="云溪部落" />
+  <link href="https://luolvshi.me/hugo2/index.xml" rel="feed" type="application/rss+xml" title="云溪部落" />
+
+
+
+<link rel="icon" href="/hugo2/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/hugo2/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="云溪部落" />
+<meta property="og:description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://luolvshi.me/hugo2/" />
+
+
+
+<meta property="og:updated_time" content="2017-03-06T13:24:08&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="云溪部落">
+<meta itemprop="description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="云溪部落"/>
+<meta name="twitter:description" content="AxdLog - A personal blog focus on GNU/Linux howtos, tutorials, securities and experience sharing."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/hugo2/" class="logo">AxdLog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        <a href="/hugo2/post/">Archives</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/tags/">Tags</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/categories/">Categories</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/about/">About</a>
+      </li>
+    
+      
+      <li class="mobile-menu-item">
+        <a class="" href="https://luolvshi.me/hugo2/zh/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/hugo2/" class="logo">
+    
+      AxdLog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+      
+      <li class="menu-item">
+        <a class="menu-item-link" href="https://luolvshi.me/hugo2/zh/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          
+  <section id="posts" class="posts">
+    
+    
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2017/installing-and-configuring-docker-community-edition-ce-on-gnu-linux/">Installing And Configuring Docker Community Edition(CE) On GNU/Linux</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Mar 6, 2017 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/container/"> Container </a>
+          
+        </div>
+      <span class="more-meta"> 1668 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 11, 2018</span>
+      
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2017/installing-and-configuring-docker-community-edition-ce-on-gnu-linux/"><b>漢文版</b></a></span>
+  
+
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><a href="https://www.docker.com" title="Docker">Docker</a> is a open source container program that performs operating-system-level virtualization. <a href="https://www.docker.com" title="Docker">Docker</a> currently provides three products <code>Enterprise Edition(EE)</code>、<code>Community Edition(CE)</code> and <code>Cloud</code>. This article documents how to install and configure Docker CE in GNU/Linux.</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2017/installing-and-configuring-docker-community-edition-ce-on-gnu-linux/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2017/product-support-life-cycle-info-for-mainstream-gnu-linux-distributions/">Life Cycle Info For Mainstream GNU Linux Distributions</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Feb 13, 2017 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/gnu/linux/"> GNU/Linux </a>
+          
+        </div>
+      <span class="more-meta"> 2556 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">May 10, 2018</span>
+      
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2017/product-support-life-cycle-info-for-mainstream-gnu-linux-distributions/"><b>漢文版</b></a></span>
+  
+
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><a href="https://www.gnu.org" title="GNU Operating System">GNU/Linux</a> is a open source operating system, it consists of <a href="linuxkernel">Linux kernel</a> and a piece of programs. It has many distributions, <a href="https://www.redhat.com/en" title="RedHat">RHEL</a>/<a href="https://www.centos.org" title="CentOS">CentOS</a>、 <a href="https://www.debian.org" title="Debian">Debian</a>/<a href="https://www.ubuntu.com" title="Ubuntu">Ubuntu</a>、<a href="https://www.suse.com" title="SUSE">SUSE</a>/<a href="https://www.opensuse.org" title="OpenSUSE">OpenSUSE</a> are mainstream distributions. In order to extract the product support life cycle info, I wrote a <a href="https://github.com/MaxdSre/axd-ShellScript/blob/master/assets/gnulinux/gnuLinuxLifeCycleInfo.sh">Shell script</a> to extract relevant info from their official site.</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2017/product-support-life-cycle-info-for-mainstream-gnu-linux-distributions/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/setting-up-tor-browser-on-gnu-linux/">Setting Up Tor Browser On GNU/Linux</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Dec 22, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/gnu/linux/"> GNU/Linux </a>
+          
+        </div>
+      <span class="more-meta"> 2865 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 11, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser</a>是由<a href="https://www.torproject.org">Tor Project</a>推出的一款集成了<a href="https://www.torproject.org/">Tor</a>，<a href="https://www.mozilla.org/en-US/firefox/organizations/">Firefox ESR</a>, <a href="https://www.torproject.org/docs/torbutton/">Torbutton</a>, <a href="https://github.com/micahflee/torbrowser-launcher">TorLauncher</a>, <a href="https://noscript.net">NoScript</a>,和 <a href="https://www.eff.org/https-everywhere">HTTPS-Everywhere</a>的瀏覽器。<a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser</a>默認監聽<code>9150</code>、<code>9151</code>端口，通過<a href="https://en.wikipedia.org/wiki/Tor_(anonymity_network)" title="WikiPedia">Tor (anonymity network)</a>實現匿名訪問，保障用戶隱私。</p>
+
+<p>本文記錄如何在GNU/Linux中下載、校驗、安裝<a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser</a>及在<a href="https://www.gnome.org">GNOME</a>桌面中創建快捷圖標。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/setting-up-tor-browser-on-gnu-linux/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/analying-the-change-frequency-of-active-users-tokens-from-tomcat-logs/">Analying The Change Frequency Of Active Users Tokens From Tomcat Logs</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Dec 5, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/production-case/"> Production Case </a>
+          
+        </div>
+      <span class="more-meta"> 4484 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 11, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>接到Java開發人員的需求,從Tomcat日誌中提取最近一個月查詢、購票活躍度最高的5位iOS用戶的token變更頻率。日誌文件在線上生產服務器中，單個文件高達十數GB，無法使用<code>vim</code>打開，只能下載到本機後再進行數據提取操作，以下是完整的記錄。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/analying-the-change-frequency-of-active-users-tokens-from-tomcat-logs/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/self-developing-asset-management-platform-based-on-symfony-framework/">Self-Developing Asset Management Platform Based On Symfony Framework</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Nov 15, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/production-case/"> Production Case </a>
+          
+            <a href="/hugo2/categories/php/"> PHP </a>
+          
+        </div>
+      <span class="more-meta"> 7961 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 16, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p>根據公司直屬領導指示，進行 <strong>資產管理系統平臺</strong> 的開發，整個項目由本人獨立完成，項目週期2個月左右，現已部署上線，可通過公司內網訪問。</p>
+
+<p>因本人此前從事<a href="https://secure.php.net" title="PHP is a popular general-purpose scripting language that is especially suited to web development.">PHP</a>開發，故選擇<a href="https://secure.php.net" title="PHP is a popular general-purpose scripting language that is especially suited to web development.">PHP</a>做爲開發語言，開發框架選擇<a href="https://symfony.com" title="High Performance PHP Framework for Web Development">Symfony</a>。如何部署Symfony項目，詳見本人 <a href="/hugo2/2016/configuring-nginx-web-server-for-symfony-framework-on-gnu-linux/">blog</a>。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/self-developing-asset-management-platform-based-on-symfony-framework/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/hugo2/2016/configuring-nginx-web-server-for-symfony-framework-on-gnu-linux/">Configuring Nginx Web Server For Symfony Framework On GNU Linux</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> Nov 15, 2016 </span>
+      <div class="post-category">
+          
+            <a href="/hugo2/categories/php/"> PHP </a>
+          
+        </div>
+      <span class="more-meta"> 1143 words </span>
+      
+      <span class="">| LastMod: </span>
+      <span class="">Apr 16, 2018</span>
+      
+
+
+
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      <p><a href="https://symfony.com" title="High Performance PHP Framework for Web Development">Symfony</a>是一款<a href="https://secure.php.net" title="PHP is a popular general-purpose scripting language that is especially suited to web development.">PHP</a>開發框架，具體安裝、配置可參閱本人之前 <a href="/hugo2/2016/installing-and-setting-up-the-symfony-framework-on-centos-7/">blog</a>。本文記錄如何在<a href="https://www.nginx.com" title="High Performance Load Balancer, Web Server, &amp; Reverse Proxy">Nginx</a>中部署<a href="https://symfony.com" title="High Performance PHP Framework for Web Development">Symfony</a>項目。</p>
+
+<p><strong>說明</strong>：文中的操作、配置基於<a href="https://symfony.com" title="High Performance PHP Framework for Web Development">Symfony 3</a>（2016年11月），不一定適用於<a href="https://symfony.com" title="High Performance PHP Framework for Web Development">Symfony 4</a>。此次遷移只做勘誤，不做具體配置的更新（2018年04月16日）。</p>
+
+<p></p>
+    </div>
+    <div class="read-more">
+      <a href="/hugo2/2016/configuring-nginx-web-server-for-symfony-framework-on-gnu-linux/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+  </section>
+
+  
+  
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  <nav class="pagination">
+    <ul>
+      
+      <li >
+        <a href="/hugo2/">1</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/2/">2</a>
+      </li>
+      
+      <li  class="active" >
+        <a href="/hugo2/page/3/">3</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/4/">4</a>
+      </li>
+      
+      <li >
+        <a href="/hugo2/page/5/">5</a>
+      </li>
+      
+    </ul>
+  </nav>
+
+  
+  
+
+
+
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/7040344" rel="me noopener" class="iconfont icon-stack-overflow"
+        title="stack-overflow" target="_blank">
+      </a>
+      <a href="https://www.linkedin.com/in/lempstacker" rel="me noopener" class="iconfont icon-linkedin"
+        title="linkedin" target="_blank">
+      </a>
+      <a href="https://github.com/MaxdSre" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://luolvshi.me/hugo2/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    <a class="hexo-link" rel="nofollow" href="https://gohugo.io" title="Hugo">Generator</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    <a class="theme-link" rel="nofollow" href="https://github.com/xianmin/hugo-theme-jane" title="Jane">Theme</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+  <a class="theme-link" rel="nofollow" href="https://www.cloudflare.com" title="CloudFlare">SSL</a>
+  </span>
+  
+  
+  <span class="division">|</span>
+  <span>
+  <a class="theme-link" href="https://luolvshi.me/hugo2/sitemap.xml" >Sitemap</a>
+  </span>
+  <span class="copyright-year">
+    &copy;
+    
+      2016 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">MaxdSre</span></span>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/hugo2/dist/jane.min.js?v=2.7.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/hugo2/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

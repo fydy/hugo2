@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Setting Up Slack Build Notification in Travis CI for Github Project - 云溪部落</title>
+  <link rel="alternate" hreflang="en" href="https://luolvshi.me/hugo2" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Window-Target" content="_value"> 
+<meta name="robots" content="index,follow"> 
+<meta name="googlebot" content="index,follow"> 
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="MaxdSre" /><meta name="description" content="How to set up Slack build notification in Travis CI for Github project" />
+<meta name="keywords" content="AxdLog, Slack, Slack Notification, Travis CI, GitHub" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.41" />
+
+
+<link rel="canonical" href="https://luolvshi.me/hugo2/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/" />
+
+
+
+<link rel="icon" href="/hugo2/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/hugo2/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="Setting Up Slack Build Notification in Travis CI for Github Project" />
+<meta property="og:description" content="How to set up Slack build notification in Travis CI for Github project" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://luolvshi.me/hugo2/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/" />
+
+
+
+<meta property="article:published_time" content="2018-04-18T13:31:34-04:00"/>
+
+<meta property="article:modified_time" content="2018-04-18T13:31:34-04:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Setting Up Slack Build Notification in Travis CI for Github Project">
+<meta itemprop="description" content="How to set up Slack build notification in Travis CI for Github project">
+
+
+<meta itemprop="datePublished" content="2018-04-18T13:31:34-04:00" />
+<meta itemprop="dateModified" content="2018-04-18T13:31:34-04:00" />
+<meta itemprop="wordCount" content="569">
+
+
+
+<meta itemprop="keywords" content="Github,Travis CI,Slack," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setting Up Slack Build Notification in Travis CI for Github Project"/>
+<meta name="twitter:description" content="How to set up Slack build notification in Travis CI for Github project"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/hugo2/" class="logo">AxdLog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        <a href="/hugo2/post/">Archives</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/tags/">Tags</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/categories/">Categories</a>
+      </li><li class="mobile-menu-item">
+        <a href="/hugo2/about/">About</a>
+      </li>
+    
+      
+      <li class="mobile-menu-item">
+        <a class="" href="https://luolvshi.me/hugo2/zh/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/hugo2/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/hugo2/" class="logo">
+    
+      AxdLog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://luolvshi.me/hugo2/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+      
+      <li class="menu-item">
+        <a class="menu-item-link" href="https://luolvshi.me/hugo2/zh/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/"><b>ZH</b></a>
+      </li>
+      
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">Setting Up Slack Build Notification in Travis CI for Github Project</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> Apr 18, 2018 </span>
+        <div class="post-category">
+            
+              <a href="/hugo2/categories/blog/"> Blog </a>
+            
+              <a href="/hugo2/categories/devops/"> DevOps </a>
+            
+          </div>
+        <span class="more-meta"> 569 words </span>
+        
+        
+        
+  
+  
+  <span class="post-content">| <a href="https://luolvshi.me/hugo2/zh/2018/setting-up-slack-build-notification-in-travis-ci-for-github-project/"><b>漢文版</b></a></span>
+  
+
+
+
+
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#official-document">Official Document</a></li>
+<li><a href="#slack">Slack</a>
+<ul>
+<li><a href="#create-new-channel">Create New Channel</a></li>
+<li><a href="#token-generation">Token Generation</a></li>
+<li><a href="#encrypting-credentials">Encrypting Credentials</a></li>
+</ul></li>
+<li><a href="#travis-yml">.travis.yml</a>
+<ul>
+<li><a href="#template">Template</a></li>
+</ul></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#change-log">Change Log</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p>By default, <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a> uses email to send build notification, it also support other method, e.g. <a href="https://slack.com" title="Where work happens">Slack</a>. This article documents how to set up <a href="https://slack.com" title="Where work happens">Slack</a> notification for <a href="https://github.com">GitHub</a> project integrated <a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a>.</p>
+
+<p></p>
+
+<p>I take my personal blog <a href="https://axdlog.com"><strong>AxdLog</strong></a> as operation example.</p>
+
+<table>
+<thead>
+<tr>
+<th>item</th>
+<th>details</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>repo</td>
+<td><a href="https://github.com/MaxdSre/maxdsre.github.io">MaxdSre/maxdsre.github.io</a></td>
+</tr>
+
+<tr>
+<td>channel</td>
+<td>github_axdlog</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="official-document">Official Document</h2>
+
+<p><a href="https://travis-ci.org" title="Test and Deploy with Confidence">Travis CI</a> official documents</p>
+
+<ul>
+<li><a href="https://docs.travis-ci.com/user/notifications#Configuring-Slack-notifications">Configuring Build Notifications</a></li>
+<li><a href="https://docs.travis-ci.com/user/encryption-keys/">Encryption keys</a></li>
+<li><a href="https://api.slack.com/docs/message-formatting">Configuring Build Notifications</a></li>
+</ul>
+
+<h2 id="slack">Slack</h2>
+
+<p>This step doesn&rsquo;t include <a href="https://slack.com" title="Where work happens">Slack</a> account registration. Clicking link <a href="https://slack.com/signin">https://slack.com/signin</a> to login in.</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_13-51-02.png" alt="" /></p>
+
+<p>Inputing user name, password</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_13-53-07.png" alt="" /></p>
+
+<h3 id="create-new-channel">Create New Channel</h3>
+
+<p>Clicking <code>Channel</code> or <code>+</code> on the left of the page to create a new channel</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_13-57-07.png" alt="" /></p>
+
+<p>Here I set name as <code>github_axdlog</code> and choose <code>private</code></p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_14-13-38.png" alt="" /></p>
+
+<p>newly created channel</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_14-13-58.png" alt="" /></p>
+
+<h3 id="token-generation">Token Generation</h3>
+
+<p>Clicking link <a href="https://my.slack.com/services/new/travis">https://my.slack.com/services/new/travis</a> into Travis configuration page, choose target channel (<code>github_axdlog</code>) in the selection menu</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_14-14-38.png" alt="" /></p>
+
+<p>Newly generated token is <code>maxdsre:ne18Xpc5RbzM1hIdd34nN2aE</code></p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_14-15-34.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_14-15-52.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_14-16-04.png" alt="" /></p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_14-16-16.png" alt="" /></p>
+
+<p>Encrypting your credentials</p>
+
+<blockquote>
+<p>Your integration token is semi-secret, but we recommend <a href="http://docs.travis-ci.com/user/encryption-keys/">encrypting your credentials</a> using the <a href="https://github.com/travis-ci/travis#readme">Travis command line client</a>.</p>
+</blockquote>
+
+<h3 id="encrypting-credentials">Encrypting Credentials</h3>
+
+<p>After I failed to install <code>travis</code> according to official docs, I choose <a href="https://www.docker.com" title="Docker">Docker</a> image to generate encrypted credential.</p>
+
+<p>If you don&rsquo;t know how to install <a href="https://www.docker.com" title="Docker">Docker</a>, you may consider reference my blog <a href="/hugo2/2017/installing-and-configuring-docker-community-edition-ce-on-gnu-linux/">Installing And Configuring Docker Community Edition(CE) On GNU/Linux</a>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">docker pull ruby
+docker run -ti --rm ruby bash</code></pre></td></tr></table>
+</div>
+</div>
+<p>Executing the following commands in container</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># install travis
+</span><span class="c1"></span>gem install travis
+
+touch .travis.yml
+travis encrypt <span class="s2">&#34;maxdsre:ne18Xpc5RbzM1hIdd34nN2aE&#34;</span> --add notifications.slack.rooms -r MaxdSre/maxdsre.github.io
+cat .travis.yml</code></pre></td></tr></table>
+</div>
+</div>
+<p>details</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">root@a24abf051547:/# travis --version
+Shell completion not installed. Would you like to install it now? <span class="p">|</span>y<span class="p">|</span> y
+<span class="m">1</span>.8.8
+root@a24abf051547:/# travis encrypt <span class="s2">&#34;maxdsre:ne18Xpc5RbzM1hIdd34nN2aE&#34;</span> --add notifications.slack.rooms
+Can<span class="s1">&#39;t figure out GitHub repo name. Ensure you&#39;</span>re in the repo directory, or specify the repo name via the -r option <span class="o">(</span>e.g. travis &lt;command&gt; -r &lt;owner&gt;/&lt;repo&gt;<span class="o">)</span>
+root@a24abf051547:/# travis encrypt <span class="s2">&#34;maxdsre:ne18Xpc5RbzM1hIdd34nN2aE&#34;</span> --add notifications.slack.rooms -r MaxdSre/maxdsre.github.io
+no .travis.yml found
+root@a24abf051547:/# touch .travis.yml
+root@a24abf051547:/# travis encrypt <span class="s2">&#34;maxdsre:ne18Xpc5RbzM1hIdd34nN2aE&#34;</span> --add notifications.slack.rooms -r MaxdSre/maxdsre.github.io
+root@a24abf051547:/# cat .travis.yml
+notifications:
+  slack:
+    rooms:
+      secure: o5TEEslShhI5AGKaVMbV5bPT7Hkh/lQkqd2T76fXfgXVGpxGWY+rQmijyh4hm7APKzOwxw64J/L7rTVKlW14QlCXe4ff8+diooG365g6j9h8esuXpJhRDtP72SrPHkAOwo8loX72DR7uazRUYSs0AOGwmYHyctLnhNOmWPVkp3ISAK9unEOIZ0UJ7381rZVWTiVReAVrbpe5jlX3nSbBdineKVar+511BHO+eKTU28AlCFgUSG3isvV1dUhZZfHHUaOx3ApzZAmx7GYDBIIqcfZ6r5x1PmZIDjnH3v4TvxRhUpAp6L5IGbpqhAps5dg73nZfzJz4+bM4ruMRBo9PDfgVbA+9zMpN8/yBL6E/OS2u045TJ491n8PE/+GoajMCzijuoKgHjTzWyVhIV9dEmVOpjOZL9rv6R1mqKoUwbV8rs8WjqciBlfoC6WwZOAWTcXok5RIMmSQ94oBZEtGSmTtALS5D0D7uCuHJt2Nz+GhrKbuwM/eSRYUwyWvNJdqSTbFnEJp27AhP5hxHrzg7uEv9cablPNf1NTFquZJH/ROUf0nKqsVZOJMQElRdcr37Es4tSg6WTKYs4XIeh1R9Yjws53KLOv2phTvFzhGPmycgPrADhHVnGoWtePyNCwASc+x7HQJQoUM6Y2i9AVruHN3XmsXq7dSIu3srqPy2lRw<span class="o">=</span>
+root@a24abf051547:/#</code></pre></td></tr></table>
+</div>
+</div>
+<p>Error info</p>
+
+<p>GitHub repo name</p>
+
+<blockquote>
+<p>Can&rsquo;t figure out GitHub repo name. Ensure you&rsquo;re in the repo directory, or specify the repo name via the -r option (e.g. travis <command> -r <owner>/<repo>)</p>
+</blockquote>
+
+<p>.travis.yml</p>
+
+<blockquote>
+<p>no .travis.yml found</p>
+</blockquote>
+
+<p>token <code>maxdsre:ne18Xpc5RbzM1hIdd34nN2aE</code> 經<code>travis</code>加密後生成的字符串爲</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-txt" data-lang="txt"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-txt" data-lang="txt">o5TEEslShhI5AGKaVMbV5bPT7Hkh/lQkqd2T76fXfgXVGpxGWY<span class="o">+</span>rQmijyh4hm7APKzOwxw64J/L7rTVKlW14QlCXe4ff8<span class="o">+</span>diooG365g6j9h8esuXpJhRDtP72SrPHkAOwo8loX72DR7uazRUYSs0AOGwmYHyctLnhNOmWPVkp3ISAK9unEOIZ0UJ7381rZVWTiVReAVrbpe5jlX3nSbBdineKVar<span class="o">+</span><span class="mi">511</span>BHO<span class="o">+</span>eKTU28AlCFgUSG3isvV1dUhZZfHHUaOx3ApzZAmx7GYDBIIqcfZ6r5x1PmZIDjnH3v4TvxRhUpAp6L5IGbpqhAps5dg73nZfzJz4<span class="o">+</span>bM4ruMRBo9PDfgVbA<span class="o">+</span><span class="mi">9</span>zMpN8/yBL6E/OS2u045TJ491n8PE/<span class="o">+</span>GoajMCzijuoKgHjTzWyVhIV9dEmVOpjOZL9rv6R1mqKoUwbV8rs8WjqciBlfoC6WwZOAWTcXok5RIMmSQ94oBZEtGSmTtALS5D0D7uCuHJt2Nz<span class="o">+</span>GhrKbuwM/eSRYUwyWvNJdqSTbFnEJp27AhP5hxHrzg7uEv9cablPNf1NTFquZJH/ROUf0nKqsVZOJMQElRdcr37Es4tSg6WTKYs4XIeh1R9Yjws53KLOv2phTvFzhGPmycgPrADhHVnGoWtePyNCwASc<span class="o">+</span>x7HQJQoUM6Y2i9AVruHN3XmsXq7dSIu3srqPy2lRw<span class="o">=</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="travis-yml">.travis.yml</h2>
+
+<p>Refering to official document <a href="https://docs.travis-ci.com/user/notifications#Configuring-Slack-notifications">Configuring Build Notifications</a>, configuring directive <code>notifications</code> in file <code>.travis.yml</code> which is saved in the root dir of project <code>MaxdSre/maxdsre.github.io</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yml" data-lang="yml">notifications<span class="p">:</span><span class="w">
+</span><span class="w">  </span>email<span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">    </span><span class="c"># default notification method</span><span class="w">
+</span><span class="w">  </span>slack<span class="p">:</span><span class="w">
+</span><span class="w">    </span>rooms<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>secure<span class="p">:</span><span class="w"> </span>o5TEEslShhI5AGKaVMbV5bPT7Hkh/lQkqd2T76fXfgXVGpxGWY+rQmijyh4hm7APKzOwxw64J/L7rTVKlW14QlCXe4ff8+diooG365g6j9h8esuXpJhRDtP72SrPHkAOwo8loX72DR7uazRUYSs0AOGwmYHyctLnhNOmWPVkp3ISAK9unEOIZ0UJ7381rZVWTiVReAVrbpe5jlX3nSbBdineKVar+511BHO+eKTU28AlCFgUSG3isvV1dUhZZfHHUaOx3ApzZAmx7GYDBIIqcfZ6r5x1PmZIDjnH3v4TvxRhUpAp6L5IGbpqhAps5dg73nZfzJz4+bM4ruMRBo9PDfgVbA+9zMpN8/yBL6E/OS2u045TJ491n8PE/+GoajMCzijuoKgHjTzWyVhIV9dEmVOpjOZL9rv6R1mqKoUwbV8rs8WjqciBlfoC6WwZOAWTcXok5RIMmSQ94oBZEtGSmTtALS5D0D7uCuHJt2Nz+GhrKbuwM/eSRYUwyWvNJdqSTbFnEJp27AhP5hxHrzg7uEv9cablPNf1NTFquZJH/ROUf0nKqsVZOJMQElRdcr37Es4tSg6WTKYs4XIeh1R9Yjws53KLOv2phTvFzhGPmycgPrADhHVnGoWtePyNCwASc+x7HQJQoUM6Y2i9AVruHN3XmsXq7dSIu3srqPy2lRw=<span class="w">
+</span><span class="w">    </span>on_success<span class="p">:</span><span class="w"> </span>always<span class="w">  </span><span class="c"># change: send a notification when the build status changes.</span><span class="w">
+</span><span class="w">    </span>on_failure<span class="p">:</span><span class="w"> </span>always<span class="w">  </span><span class="c"># always: always send a notification.</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="template">Template</h3>
+
+<p>Default message template</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># push
+</span><span class="c1"></span>- <span class="s2">&#34;Build &lt;%{build_url}|#%{build_number}&gt; (&lt;%{compare_url}|%{commit}&gt;) of %{repository_slug}@%{branch} by %{author} %{result} in %{duration}&#34;</span>
+
+<span class="c1"># pull
+</span><span class="c1"></span>- <span class="s2">&#34;Build &lt;%{build_url}|#%{build_number}&gt; (&lt;%{compare_url}|%{commit}&gt;) of %{repository_slug}@%{branch} in PR &lt;%{pull_request_url}|#%{pull_request_number}&gt; by %{author} %{result} in %{duration}&#34;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>custom template, the final format</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">notifications:
+  email: false    # default notification method
+  slack:
+    rooms:
+      - secure: BwlcaZ7keVQyKFxqT5DMKXQAhT9SY+w4WzDh4Y1kVFHa6LvuALpSIElfeVwCWnIbEjDgLCoZBfcYPqEuhmIG2K4TF25bNZYNrkDIulN51cEgvfT6gW2vt+0VLulnQPtGpz0hLV0MNNgegG3znT8Nz6/F31iGpKUykZsZZXX9cUkycQESxIKn9Gu66Sggv/WAjQ24dmxZp5f9yhYY06hteCqycmYglplukJCB0j4vMn9oSzFGQizKv8tQeiKzPotzpoj26pSC/HU3C+YEz0FiZVY9eXcdq2hs2zPoHW/PAZ9kL9tj5YatN/IDSP/i54CRdlm/ZfUeZxQn1vtFlV1XiWp2iYXJ5C8m6TIX9hptvf3EEQWHwztJ0qv3RFx8bTZAyJBssLcDYp3sjfYeJQ79cefMP4kQpaqO4xk7oHrSTQx8kw7l9atnymbNLzFgR74WEZFUwOrPtLHq1V2fax/pReAqNTZyIuxak9Spa7buTiQJ6NifnkrQA6/rVgeAQBZXmgQkc8uJZlLibRXGc+pvdLb+cqU/zOuM+k6JSSUwagRvXbUjJIbB9IO64CgcuDpnjAv58R0nY7fAhU8b+2PVxmRUhFom2OZ1NLOdLH3yrBfrthxmtcPMZJemGm7rLYAVYbKhtZYpyfddzumkOgzv1zSo4srN1x6lFhGxsSO7UxI=
+    on_success: always  # change: send a notification when the build status changes.
+    on_failure: always  # always: always send a notification.
+    template:
+      - &#34;Repo `%{repository_slug}` *%{result}* build (&lt;%{build_url}|#%{build_number}&gt;) for commit (&lt;%{compare_url}|%{commit}&gt;) on branch `%{branch}`.&#34;
+      - &#34;Execution time: *%{duration}*&#34;
+      - &#34;Message: %{message}&#34;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="testing">Testing</h2>
+
+<p>Committing codes to GitHub after file <code>.travis.yml</code> is modified.</p>
+
+<p>Travis CI build info</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_14-54-57.png" alt="" /></p>
+
+<p>Slack notification</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_14-54-26.png" alt="" /></p>
+
+<p>Build fail notification</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_16-03-24.png" alt="" /></p>
+
+<p>Build success notification</p>
+
+<p><img src="https://raw.githubusercontent.com/MaxdSre/maxdsre.github.io/image/blog-image/2018-04-18_slack_notification_in_travis_ci/2018-04-18_16-13-33.png" alt="" /></p>
+
+<h2 id="change-log">Change Log</h2>
+
+<ul>
+<li>2018.04.18 16:07 Tue America/Boston
+
+<ul>
+<li>first draft</li>
+</ul></li>
+</ul>
+
+<!-- End -->
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">MaxdSre</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">Apr 18, 2018</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/hugo2/tags/github/">Github</a>
+          
+          <a href="/hugo2/tags/travis-ci/">Travis CI</a>
+          
+          <a href="/hugo2/tags/slack/">Slack</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/hugo2/2018/setting-up-anaconda-and-jupyter-notebook-on-gnu-linux/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Setting Up Anaconda And Jupyter Notebook On GNU/Linux</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/hugo2/2018/using-cloudflare-free-ssl-in-github-pages-with-custom-domain/">
+            <span class="next-text nav-default">Using Cloudflare Free SSL In GitHub Pages With Custom Domain</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+    
+
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+      Show Disqus Comments
+    </div>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    function load_disqus() {
+        
+        
+        if (window.location.hostname === 'localhost') return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = 'axdlog';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+        $('#load_disqus').remove();
+    };
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+  
+
+  
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://stackoverflow.com/users/7040344" rel="me noopener" class="iconfont icon-stack-overflow"
+        title="stack-overflow" target="_blank">
+      </a>
+      <a href="https://www.linkedin.com/in/lempstacker" rel="me noopener" class="iconfont icon-linkedin"
+        title="linkedin" target="_blank">
+      </a>
+      <a href="https://github.com/MaxdSre" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="https://luolvshi.me/hugo2/index.xml" rel="noopener" type="application/rss+xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    <a class="hexo-link" rel="nofollow" href="https://gohugo.io" title="Hugo">Generator</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    <a class="theme-link" rel="nofollow" href="https://github.com/xianmin/hugo-theme-jane" title="Jane">Theme</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+  <a class="theme-link" rel="nofollow" href="https://www.cloudflare.com" title="CloudFlare">SSL</a>
+  </span>
+  
+  
+  <span class="division">|</span>
+  <span>
+  <a class="theme-link" href="https://luolvshi.me/hugo2/sitemap.xml" >Sitemap</a>
+  </span>
+  <span class="copyright-year">
+    &copy;
+    
+      2016 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">MaxdSre</span></span>
+</div>
+
+
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/hugo2/dist/jane.min.js?v=2.7.0"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/hugo2/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/hugo2/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+User-agent: *
+Sitemap: https://luolvshi.me/hugo2/sitemap.xml
+Disallow: /hugo2/archives/
+Disallow: /hugo2/tags/
+Disallow: /hugo2/categories/
+Disallow: /hugo2/about/
+Disallow: /page/
+Disallow: /post/

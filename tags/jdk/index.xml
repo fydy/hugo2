@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jdk on 云溪部落</title>
+    <link>https://luolvshi.me/hugo2/tags/jdk/</link>
+    <description>Recent content in Jdk on 云溪部落</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 19 Apr 2018 15:37:16 -0400</lastBuildDate>
+    
+	<atom:link href="https://luolvshi.me/hugo2/tags/jdk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting Up Oracle JDK On GNU/Linux</title>
+      <link>https://luolvshi.me/hugo2/2018/setting-up-oracle-jdk-on-gnu-linux/</link>
+      <pubDate>Thu, 19 Apr 2018 15:37:16 -0400</pubDate>
+      
+      <guid>https://luolvshi.me/hugo2/2018/setting-up-oracle-jdk-on-gnu-linux/</guid>
+      <description>&lt;p&gt;&lt;code&gt;Java SE&lt;/code&gt; is an abbreviation for &lt;code&gt;Java Platform, Standard Edition&lt;/code&gt;, and &lt;code&gt;JDK&lt;/code&gt; is an abbreviation for &lt;code&gt;Java SE Development Kit&lt;/code&gt;. JDK provides running environment for &lt;a href=&#34;http://www.oracle.com/technetwork/java/&#34;&gt;Java&lt;/a&gt; applications. This article documents how to set up Oracle JDK on GNU/Linux, then implement the entire process through Shell script.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
